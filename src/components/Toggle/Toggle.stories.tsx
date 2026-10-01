@@ -70,7 +70,7 @@ export const IconOnly: Story = {
 export const Disabled: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'flex', gap: 'var(--sds-space-3)' }}>
+    <div style={{ display: 'flex', gap: 'var(--pds-space-3)' }}>
       <Toggle disabled>Off and disabled</Toggle>
       <Toggle disabled defaultPressed>
         On and disabled
@@ -95,11 +95,11 @@ export const WithIcon: Story = {
 export const Matrix: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-4)' }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-4)' }}>
       {(['sm', 'md', 'lg'] as const).map((size) => (
-        <div key={size} style={{ display: 'flex', gap: 'var(--sds-space-3)', alignItems: 'center' }}>
+        <div key={size} style={{ display: 'flex', gap: 'var(--pds-space-3)', alignItems: 'center' }}>
           {(['secondary', 'ghost'] as const).map((variant) => (
-            <span key={variant} style={{ display: 'flex', gap: 'var(--sds-space-2)' }}>
+            <span key={variant} style={{ display: 'flex', gap: 'var(--pds-space-2)' }}>
               <Toggle variant={variant} size={size}>
                 {variant}
               </Toggle>

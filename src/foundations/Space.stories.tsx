@@ -13,20 +13,20 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 function SpaceScale() {
-  const { ref, values } = useResolved(SPACE.map((s) => `--sds-space-${s}`));
+  const { ref, values } = useResolved(SPACE.map((s) => `--pds-space-${s}`));
   return (
-    <div ref={ref} style={{ display: 'grid', gap: 'var(--sds-space-2)' }}>
+    <div ref={ref} style={{ display: 'grid', gap: 'var(--pds-space-2)' }}>
       {SPACE.map((step) => (
-        <div key={step} style={{ display: 'flex', alignItems: 'center', gap: 'var(--sds-space-4)' }}>
-          <div style={{ ...mono, width: 190, flexShrink: 0, color: 'var(--sds-color-content-muted)' }}>
-            --sds-space-{step} · {values[`--sds-space-${step}`]}
+        <div key={step} style={{ display: 'flex', alignItems: 'center', gap: 'var(--pds-space-4)' }}>
+          <div style={{ ...mono, width: 190, flexShrink: 0, color: 'var(--pds-color-content-muted)' }}>
+            --pds-space-{step} · {values[`--pds-space-${step}`]}
           </div>
           <div
             style={{
               height: 20,
-              width: `var(--sds-space-${step})`,
-              background: 'var(--sds-color-background-accent)',
-              borderRadius: 'var(--sds-radius-sm)',
+              width: `var(--pds-space-${step})`,
+              background: 'var(--pds-color-background-accent)',
+              borderRadius: 'var(--pds-radius-sm)',
             }}
           />
         </div>
@@ -46,39 +46,39 @@ export const SpaceAndShape: Story = {
       </Group>
 
       <Group title="Radius" note="Small for inputs inside dense layouts, medium as the default, large for surfaces that float, full for pills and avatars.">
-        <div style={{ display: 'flex', gap: 'var(--sds-space-5)', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: 'var(--pds-space-5)', flexWrap: 'wrap' }}>
           {RADIUS.map((name) => (
             <div key={name} style={{ textAlign: 'center' }}>
               <div
                 style={{
                   width: 88,
                   height: 88,
-                  background: 'var(--sds-color-background-accent-subtle)',
-                  border: '1px solid var(--sds-color-border-accent)',
-                  borderRadius: `var(--sds-radius-${name})`,
+                  background: 'var(--pds-color-background-accent-subtle)',
+                  border: '1px solid var(--pds-color-border-accent)',
+                  borderRadius: `var(--pds-radius-${name})`,
                 }}
               />
-              <div style={{ ...mono, marginTop: 'var(--sds-space-1)' }}>{name}</div>
+              <div style={{ ...mono, marginTop: 'var(--pds-space-1)' }}>{name}</div>
             </div>
           ))}
         </div>
       </Group>
 
       <Group title="Elevation" note="Two roles only. Raised is for things resting on the page, overlay is for things floating above it. A third level almost always means the layout is fighting itself.">
-        <div style={{ display: 'flex', gap: 'var(--sds-space-6)', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: 'var(--pds-space-6)', flexWrap: 'wrap' }}>
           {(['raised', 'overlay'] as const).map((name) => (
             <div key={name}>
               <div
                 style={{
                   width: 180,
                   height: 110,
-                  background: 'var(--sds-color-background-surface)',
-                  border: '1px solid var(--sds-color-border-default)',
-                  borderRadius: 'var(--sds-radius-lg)',
-                  boxShadow: `var(--sds-elevation-${name})`,
+                  background: 'var(--pds-color-background-surface)',
+                  border: '1px solid var(--pds-color-border-default)',
+                  borderRadius: 'var(--pds-radius-lg)',
+                  boxShadow: `var(--pds-elevation-${name})`,
                 }}
               />
-              <div style={{ ...mono, marginTop: 'var(--sds-space-2)' }}>--sds-elevation-{name}</div>
+              <div style={{ ...mono, marginTop: 'var(--pds-space-2)' }}>--pds-elevation-{name}</div>
             </div>
           ))}
         </div>

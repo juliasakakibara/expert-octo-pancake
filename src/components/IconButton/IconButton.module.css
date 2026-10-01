@@ -4,20 +4,20 @@
   align-items: center;
   justify-content: center;
   flex: none;
-  padding: var(--sds-space-0);
+  padding: var(--pds-space-0);
   border: 1px solid transparent;
-  border-radius: var(--sds-radius-md);
-  font-family: var(--sds-font-sans);
-  line-height: var(--sds-line-height-tight);
+  border-radius: var(--pds-radius-md);
+  font-family: var(--pds-font-sans);
+  line-height: var(--pds-line-height-tight);
   cursor: pointer;
   transition:
-    background-color var(--sds-duration-fast) var(--sds-easing-standard),
-    border-color var(--sds-duration-fast) var(--sds-easing-standard),
-    color var(--sds-duration-fast) var(--sds-easing-standard);
+    background-color var(--pds-duration-fast) var(--pds-easing-standard),
+    border-color var(--pds-duration-fast) var(--pds-easing-standard),
+    color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .root:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }
 
@@ -48,40 +48,40 @@
 
 /* Variants, mirroring Button. */
 .primary {
-  background: var(--sds-color-background-accent);
-  color: var(--sds-color-content-on-accent);
+  background: var(--pds-color-background-accent);
+  color: var(--pds-color-content-on-accent);
 }
 .primary:hover:not([data-disabled]) {
-  background: var(--sds-color-background-accent-hover);
+  background: var(--pds-color-background-accent-hover);
 }
 .primary:active:not([data-disabled]) {
-  background: var(--sds-color-background-accent-active);
+  background: var(--pds-color-background-accent-active);
 }
 
 .secondary {
-  background: var(--sds-color-background-surface);
-  color: var(--sds-color-content-default);
-  border-color: var(--sds-color-border-default);
-  box-shadow: var(--sds-elevation-raised);
+  background: var(--pds-color-background-surface);
+  color: var(--pds-color-content-default);
+  border-color: var(--pds-color-border-default);
+  box-shadow: var(--pds-elevation-raised);
 }
 .secondary:hover:not([data-disabled]) {
-  background: var(--sds-color-background-sunken);
-  border-color: var(--sds-color-border-strong);
+  background: var(--pds-color-background-sunken);
+  border-color: var(--pds-color-border-strong);
 }
 
 .ghost {
   background: transparent;
-  color: var(--sds-color-content-muted);
+  color: var(--pds-color-content-muted);
 }
 .ghost:hover:not([data-disabled]) {
-  background: var(--sds-color-background-accent-subtle);
-  color: var(--sds-color-content-accent);
+  background: var(--pds-color-background-accent-subtle);
+  color: var(--pds-color-content-accent);
 }
 
 .danger {
-  background: var(--sds-color-background-danger);
-  color: var(--sds-color-content-on-danger);
+  background: var(--pds-color-background-danger);
+  color: var(--pds-color-content-on-danger);
 }
 .danger:hover:not([data-disabled]) {
-  background: var(--sds-color-background-danger-hover);
+  background: var(--pds-color-background-danger-hover);
 }

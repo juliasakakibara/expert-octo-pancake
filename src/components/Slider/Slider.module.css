@@ -1,14 +1,14 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-1);
+  gap: var(--pds-space-1);
   width: 100%;
 }
 
 .slider {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-2);
+  gap: var(--pds-space-2);
   width: 100%;
 }
 
@@ -16,27 +16,27 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: var(--sds-space-3);
+  gap: var(--pds-space-3);
 }
 
 .label {
-  font-family: var(--sds-typography-label-md-font-family);
-  font-size: var(--sds-typography-label-md-font-size);
-  font-weight: var(--sds-typography-label-md-font-weight);
-  line-height: var(--sds-typography-label-md-line-height);
-  letter-spacing: var(--sds-typography-label-md-letter-spacing);
-  text-transform: var(--sds-typography-label-md-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-label-md-font-family);
+  font-size: var(--pds-typography-label-md-font-size);
+  font-weight: var(--pds-typography-label-md-font-weight);
+  line-height: var(--pds-typography-label-md-line-height);
+  letter-spacing: var(--pds-typography-label-md-letter-spacing);
+  text-transform: var(--pds-typography-label-md-text-transform);
+  color: var(--pds-color-content-default);
 }
 
 .value {
-  font-family: var(--sds-typography-body-sm-font-family);
-  font-size: var(--sds-typography-body-sm-font-size);
-  font-weight: var(--sds-typography-body-sm-font-weight);
-  line-height: var(--sds-typography-body-sm-line-height);
-  letter-spacing: var(--sds-typography-body-sm-letter-spacing);
-  text-transform: var(--sds-typography-body-sm-text-transform);
-  color: var(--sds-color-content-muted);
+  font-family: var(--pds-typography-body-sm-font-family);
+  font-size: var(--pds-typography-body-sm-font-size);
+  font-weight: var(--pds-typography-body-sm-font-weight);
+  line-height: var(--pds-typography-body-sm-line-height);
+  letter-spacing: var(--pds-typography-body-sm-letter-spacing);
+  text-transform: var(--pds-typography-body-sm-text-transform);
+  color: var(--pds-color-content-muted);
 }
 
 .control {
@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: var(--sds-space-5);
+  height: var(--pds-space-5);
   touch-action: none;
   cursor: pointer;
 }
@@ -56,25 +56,25 @@
 .track {
   position: relative;
   width: 100%;
-  height: var(--sds-space-1);
-  background: var(--sds-color-background-sunken);
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-full);
+  height: var(--pds-space-1);
+  background: var(--pds-color-background-sunken);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-full);
 }
 
 .indicator {
-  background: var(--sds-color-background-accent);
+  background: var(--pds-color-background-accent);
   border-radius: inherit;
 }
 
 .thumb {
-  width: var(--sds-space-5);
-  height: var(--sds-space-5);
-  background: var(--sds-color-background-surface);
-  border: 2px solid var(--sds-color-border-accent);
-  border-radius: var(--sds-radius-full);
-  box-shadow: var(--sds-elevation-raised);
-  transition: box-shadow var(--sds-duration-fast) var(--sds-easing-standard);
+  width: var(--pds-space-5);
+  height: var(--pds-space-5);
+  background: var(--pds-color-background-surface);
+  border: 2px solid var(--pds-color-border-accent);
+  border-radius: var(--pds-radius-full);
+  box-shadow: var(--pds-elevation-raised);
+  transition: box-shadow var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 /*
@@ -83,12 +83,12 @@
  * would never match.
  */
 .thumb:has(:focus-visible) {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }
 
 .thumb[data-dragging] {
-  box-shadow: var(--sds-elevation-floating);
+  box-shadow: var(--pds-elevation-floating);
 }
 
 /*
@@ -102,22 +102,22 @@
 .control[data-orientation='vertical'] {
   flex-direction: column;
   justify-content: center;
-  width: var(--sds-space-5);
+  width: var(--pds-space-5);
   height: 100%;
   min-height: 8rem;
 }
 
 .track[data-orientation='vertical'] {
-  width: var(--sds-space-1);
+  width: var(--pds-space-1);
   height: 100%;
 }
 
 .slider[data-disabled] .indicator {
-  background: var(--sds-color-border-strong);
+  background: var(--pds-color-border-strong);
 }
 
 .slider[data-disabled] .thumb {
-  border-color: var(--sds-color-border-strong);
+  border-color: var(--pds-color-border-strong);
 }
 
 .slider[data-disabled] {
@@ -125,21 +125,21 @@
 }
 
 .description {
-  font-family: var(--sds-typography-caption-font-family);
-  font-size: var(--sds-typography-caption-font-size);
-  font-weight: var(--sds-typography-caption-font-weight);
-  line-height: var(--sds-typography-caption-line-height);
-  letter-spacing: var(--sds-typography-caption-letter-spacing);
-  text-transform: var(--sds-typography-caption-text-transform);
-  color: var(--sds-color-content-muted);
+  font-family: var(--pds-typography-caption-font-family);
+  font-size: var(--pds-typography-caption-font-size);
+  font-weight: var(--pds-typography-caption-font-weight);
+  line-height: var(--pds-typography-caption-line-height);
+  letter-spacing: var(--pds-typography-caption-letter-spacing);
+  text-transform: var(--pds-typography-caption-text-transform);
+  color: var(--pds-color-content-muted);
 }
 
 .error {
-  font-family: var(--sds-typography-caption-font-family);
-  font-size: var(--sds-typography-caption-font-size);
-  font-weight: var(--sds-typography-caption-font-weight);
-  line-height: var(--sds-typography-caption-line-height);
-  letter-spacing: var(--sds-typography-caption-letter-spacing);
-  text-transform: var(--sds-typography-caption-text-transform);
-  color: var(--sds-color-content-danger);
+  font-family: var(--pds-typography-caption-font-family);
+  font-size: var(--pds-typography-caption-font-size);
+  font-weight: var(--pds-typography-caption-font-weight);
+  line-height: var(--pds-typography-caption-line-height);
+  letter-spacing: var(--pds-typography-caption-letter-spacing);
+  text-transform: var(--pds-typography-caption-text-transform);
+  color: var(--pds-color-content-danger);
 }

@@ -2,6 +2,7 @@ import { Badge } from '../components/Badge';
 import { Button } from '../components/Button';
 import { Card } from '../components/Card';
 import sync from '../../docs/sync-status.json';
+import { PROJECT } from '../project';
 import styles from './GettingStarted.module.css';
 
 /*
@@ -11,19 +12,18 @@ import styles from './GettingStarted.module.css';
  * files and repositories open on GitHub.
  */
 
-const GITHUB = 'https://github.com/christinevall/ds-base-ui';
+const GITHUB = PROJECT.github;
 const LINKS = {
   github: GITHUB,
   template: `${GITHUB}/generate`,
   file: (path: string) => `${GITHUB}/blob/main/${path}`,
   folder: (path: string) => `${GITHUB}/tree/main/${path}`,
-  figma: 'https://www.figma.com/community/file/1681312616396112992',
+  figma: PROJECT.figma,
   skills: 'https://github.com/christinevall/skills',
   baseUi: 'https://base-ui.com',
   dtcg: 'https://www.designtokens.org',
   styleDictionary: 'https://styledictionary.com',
-  moonlearning: 'https://moonlearning.io',
-  newsletter: 'https://moonlearning.io/newsletter',
+  upstream: 'https://github.com/christinevall/ds-base-ui',
 };
 
 /** A Storybook page, opened in the whole window rather than inside the docs frame. */
@@ -64,7 +64,7 @@ function Tile({ title, text, href, label }: { title: string; text: string; href:
 export function Hero() {
   return (
     <div className={styles.stack}>
-      <h1 className={styles.title}>Sample Design System</h1>
+      <h1 className={styles.title}>{PROJECT.name}</h1>
       <p className={styles.lead}>
         A small, real design system for designers learning to work with AI. It is built on Base UI, styled by a token
         pipeline, documented here, and mirrored into Figma, so a screen can move between Figma and code without drifting.
@@ -143,7 +143,7 @@ export function FigmaAndCode() {
 export function GetIt() {
   return (
     <div className={styles.stack}>
-      <h2 className={styles.section}>Get it, learn it</h2>
+      <h2 className={styles.section}>Get it</h2>
       <div className={styles.cluster}>
         <Link href={LINKS.github} variant="secondary">
           GitHub repository
@@ -152,13 +152,12 @@ export function GetIt() {
           Use this template
         </Link>
         <Link href={LINKS.figma} variant="secondary">
-          Figma Community file
+          Figma file
         </Link>
         <Link href={LINKS.skills} variant="secondary">
           Skills
         </Link>
-        <Link href={LINKS.moonlearning}>Course: moonlearning.io</Link>
-        <Link href={LINKS.newsletter}>Newsletter</Link>
+        <Link href={LINKS.upstream}>Based on ds-base-ui by Christine Vallaure</Link>
       </div>
     </div>
   );

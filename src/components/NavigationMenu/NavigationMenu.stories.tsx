@@ -14,17 +14,17 @@ type Story = StoryObj<typeof meta>;
 const gridStyle = {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, minmax(0, 14rem))',
-  gap: 'var(--sds-space-1)',
+  gap: 'var(--pds-space-1)',
   margin: 0,
   padding: 0,
   listStyle: 'none',
 } as const;
 
 const descriptionStyle = {
-  color: 'var(--sds-color-content-muted)',
-  fontSize: 'var(--sds-font-size-xs)',
-  fontWeight: 'var(--sds-font-weight-regular)',
-  lineHeight: 'var(--sds-line-height-normal)',
+  color: 'var(--pds-color-content-muted)',
+  fontSize: 'var(--pds-font-size-xs)',
+  fontWeight: 'var(--pds-font-weight-regular)',
+  lineHeight: 'var(--pds-line-height-normal)',
 } as const;
 
 /** A two-item nav. Both triggers share one panel, which resizes as you move between them. */

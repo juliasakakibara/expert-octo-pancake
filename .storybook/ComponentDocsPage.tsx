@@ -36,7 +36,7 @@ function ComponentCss() {
 
   const css = stylesheets[path];
   const textStyles = [
-    ...new Set([...css.matchAll(/--sds-typography-([a-z0-9-]+?)-font-family/g)].map((m) => m[1])),
+    ...new Set([...css.matchAll(/--pds-typography-([a-z0-9-]+?)-font-family/g)].map((m) => m[1])),
   ];
 
   return (

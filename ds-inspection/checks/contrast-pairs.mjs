@@ -15,9 +15,10 @@ const read = (p) =>
   JSON.parse(readFileSync(new URL(`../../tokens/${p}`, import.meta.url)));
 const ramps = read('tier-1-definitions/color.json').color;
 
+// `{color.brand.blue.600}` -> the hex at color.brand.blue.600, any depth.
 const resolve = (v) => {
-  const m = /^\{color\.([a-z]+)\.(\d+)\}$/.exec(v);
-  return m ? ramps[m[1]][m[2]].$value : v;
+  const m = /^\{color\.([a-z0-9.-]+)\}$/.exec(v);
+  return m ? m[1].split('.').reduce((node, k) => node[k], ramps).$value : v;
 };
 const lum = (hex) => {
   const h = hex.replace('#', '');

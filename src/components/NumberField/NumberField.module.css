@@ -1,13 +1,13 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-1);
+  gap: var(--pds-space-1);
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-1);
+  gap: var(--pds-space-1);
 }
 
 .scrubArea {
@@ -24,36 +24,36 @@
 .scrubAreaCursor svg {
   display: block;
   fill: currentcolor;
-  stroke: var(--sds-color-background-surface);
+  stroke: var(--pds-color-background-surface);
 }
 
 .label {
-  font-family: var(--sds-typography-label-md-font-family);
-  font-size: var(--sds-typography-label-md-font-size);
-  font-weight: var(--sds-typography-label-md-font-weight);
-  line-height: var(--sds-typography-label-md-line-height);
-  letter-spacing: var(--sds-typography-label-md-letter-spacing);
-  text-transform: var(--sds-typography-label-md-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-label-md-font-family);
+  font-size: var(--pds-typography-label-md-font-size);
+  font-weight: var(--pds-typography-label-md-font-weight);
+  line-height: var(--pds-typography-label-md-line-height);
+  letter-spacing: var(--pds-typography-label-md-letter-spacing);
+  text-transform: var(--pds-typography-label-md-text-transform);
+  color: var(--pds-color-content-default);
 }
 
 .group {
   display: inline-flex;
   align-items: stretch;
   align-self: flex-start;
-  background: var(--sds-color-background-surface);
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-md);
+  background: var(--pds-color-background-surface);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-md);
   overflow: hidden;
-  transition: border-color var(--sds-duration-fast) var(--sds-easing-standard);
+  transition: border-color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .group:hover:not([data-disabled]) {
-  border-color: var(--sds-color-border-strong);
+  border-color: var(--pds-color-border-strong);
 }
 
 .group[data-invalid] {
-  border-color: var(--sds-color-border-danger);
+  border-color: var(--pds-color-border-danger);
 }
 
 .group[data-disabled] {
@@ -64,23 +64,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--sds-space-8);
-  height: var(--sds-space-10);
+  width: var(--pds-space-8);
+  height: var(--pds-space-10);
   padding: 0;
-  background: var(--sds-color-background-sunken);
-  color: var(--sds-color-content-default);
+  background: var(--pds-color-background-sunken);
+  color: var(--pds-color-content-default);
   border: none;
   cursor: pointer;
-  transition: background-color var(--sds-duration-fast) var(--sds-easing-standard);
+  transition: background-color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .button:hover:not([data-disabled]) {
-  background: var(--sds-color-background-accent-subtle);
-  color: var(--sds-color-content-accent);
+  background: var(--pds-color-background-accent-subtle);
+  color: var(--pds-color-content-accent);
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: -2px;
 }
 
@@ -89,26 +89,26 @@
 }
 
 .input {
-  width: var(--sds-space-12);
+  width: var(--pds-space-12);
   min-width: 0;
   flex: 1;
-  height: var(--sds-space-10);
-  padding: 0 var(--sds-space-3);
-  background: var(--sds-color-background-surface);
-  color: var(--sds-color-content-default);
+  height: var(--pds-space-10);
+  padding: 0 var(--pds-space-3);
+  background: var(--pds-color-background-surface);
+  color: var(--pds-color-content-default);
   border: none;
-  border-inline: 1px solid var(--sds-color-border-default);
-  font-family: var(--sds-typography-body-md-font-family);
-  font-size: var(--sds-typography-body-md-font-size);
-  font-weight: var(--sds-typography-body-md-font-weight);
-  line-height: var(--sds-typography-body-md-line-height);
-  letter-spacing: var(--sds-typography-body-md-letter-spacing);
-  text-transform: var(--sds-typography-body-md-text-transform);
+  border-inline: 1px solid var(--pds-color-border-default);
+  font-family: var(--pds-typography-body-md-font-family);
+  font-size: var(--pds-typography-body-md-font-size);
+  font-weight: var(--pds-typography-body-md-font-weight);
+  line-height: var(--pds-typography-body-md-line-height);
+  letter-spacing: var(--pds-typography-body-md-letter-spacing);
+  text-transform: var(--pds-typography-body-md-text-transform);
   text-align: center;
 }
 
 .input:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: -2px;
 }
 
@@ -117,21 +117,21 @@
 }
 
 .description {
-  font-family: var(--sds-typography-caption-font-family);
-  font-size: var(--sds-typography-caption-font-size);
-  font-weight: var(--sds-typography-caption-font-weight);
-  line-height: var(--sds-typography-caption-line-height);
-  letter-spacing: var(--sds-typography-caption-letter-spacing);
-  text-transform: var(--sds-typography-caption-text-transform);
-  color: var(--sds-color-content-muted);
+  font-family: var(--pds-typography-caption-font-family);
+  font-size: var(--pds-typography-caption-font-size);
+  font-weight: var(--pds-typography-caption-font-weight);
+  line-height: var(--pds-typography-caption-line-height);
+  letter-spacing: var(--pds-typography-caption-letter-spacing);
+  text-transform: var(--pds-typography-caption-text-transform);
+  color: var(--pds-color-content-muted);
 }
 
 .error {
-  font-family: var(--sds-typography-caption-font-family);
-  font-size: var(--sds-typography-caption-font-size);
-  font-weight: var(--sds-typography-caption-font-weight);
-  line-height: var(--sds-typography-caption-line-height);
-  letter-spacing: var(--sds-typography-caption-letter-spacing);
-  text-transform: var(--sds-typography-caption-text-transform);
-  color: var(--sds-color-content-danger);
+  font-family: var(--pds-typography-caption-font-family);
+  font-size: var(--pds-typography-caption-font-size);
+  font-weight: var(--pds-typography-caption-font-weight);
+  line-height: var(--pds-typography-caption-line-height);
+  letter-spacing: var(--pds-typography-caption-letter-spacing);
+  text-transform: var(--pds-typography-caption-text-transform);
+  color: var(--pds-color-content-danger);
 }

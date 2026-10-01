@@ -84,13 +84,13 @@ export const HeadingLevel: Story = {
       <h1
         style={{
           margin: 0,
-          fontFamily: 'var(--sds-font-sans)',
-          fontSize: 'var(--sds-font-size-xl)',
+          fontFamily: 'var(--pds-font-sans)',
+          fontSize: 'var(--pds-font-size-xl)',
         }}
       >
         Billing
       </h1>
-      <Card.Root variant="outlined" style={{ marginTop: 'var(--sds-space-4)' }}>
+      <Card.Root variant="outlined" style={{ marginTop: 'var(--pds-space-4)' }}>
         <Card.Header>
           <Card.Title render={<h2 />}>Current plan</Card.Title>
           <Card.Description>Team, billed annually. Renews on 1 March.</Card.Description>
@@ -105,7 +105,7 @@ export const HeadingLevel: Story = {
 export const Variants: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'flex', gap: 'var(--sds-space-4)', flexWrap: 'wrap' }}>
+    <div style={{ display: 'flex', gap: 'var(--pds-space-4)', flexWrap: 'wrap' }}>
       {(['outlined', 'elevated'] as const).map((variant) => (
         <Card.Root key={variant} variant={variant} style={{ width: 260 }}>
           <Card.Header>

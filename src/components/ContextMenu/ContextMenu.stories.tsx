@@ -16,12 +16,12 @@ const targetStyle = {
   placeItems: 'center',
   width: '24rem',
   height: '10rem',
-  padding: 'var(--sds-space-4)',
-  border: '1px dashed var(--sds-color-border-strong)',
-  borderRadius: 'var(--sds-radius-md)',
-  color: 'var(--sds-color-content-muted)',
-  fontFamily: 'var(--sds-font-sans)',
-  fontSize: 'var(--sds-font-size-sm)',
+  padding: 'var(--pds-space-4)',
+  border: '1px dashed var(--pds-color-border-strong)',
+  borderRadius: 'var(--pds-radius-md)',
+  color: 'var(--pds-color-content-muted)',
+  fontFamily: 'var(--pds-font-sans)',
+  fontSize: 'var(--pds-font-size-sm)',
   textAlign: 'center',
 } as const;
 

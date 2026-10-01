@@ -10,13 +10,13 @@
 }
 
 .wordmark {
-  font-family: var(--sds-typography-heading-md-font-family);
-  font-size: var(--sds-typography-heading-md-font-size);
-  font-weight: var(--sds-typography-heading-md-font-weight);
-  line-height: var(--sds-typography-heading-md-line-height);
-  letter-spacing: var(--sds-typography-heading-md-letter-spacing);
-  text-transform: var(--sds-typography-heading-md-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-heading-md-font-family);
+  font-size: var(--pds-typography-heading-md-font-size);
+  font-weight: var(--pds-typography-heading-md-font-weight);
+  line-height: var(--pds-typography-heading-md-line-height);
+  letter-spacing: var(--pds-typography-heading-md-letter-spacing);
+  text-transform: var(--pds-typography-heading-md-text-transform);
+  color: var(--pds-color-content-default);
   white-space: nowrap;
 }
 
@@ -24,7 +24,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-2);
+  gap: var(--pds-space-2);
 }
 
 /* Figma "Badges": a wrapping row. Layout, not a component. */
@@ -32,36 +32,36 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--sds-space-2);
+  gap: var(--pds-space-2);
 }
 
 .title {
   margin: 0;
-  font-family: var(--sds-typography-heading-xl-font-family);
-  font-size: var(--sds-typography-heading-xl-font-size);
-  font-weight: var(--sds-typography-heading-xl-font-weight);
-  line-height: var(--sds-typography-heading-xl-line-height);
-  letter-spacing: var(--sds-typography-heading-xl-letter-spacing);
-  text-transform: var(--sds-typography-heading-xl-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-heading-xl-font-family);
+  font-size: var(--pds-typography-heading-xl-font-size);
+  font-weight: var(--pds-typography-heading-xl-font-weight);
+  line-height: var(--pds-typography-heading-xl-line-height);
+  letter-spacing: var(--pds-typography-heading-xl-letter-spacing);
+  text-transform: var(--pds-typography-heading-xl-text-transform);
+  color: var(--pds-color-content-default);
 }
 
 .lead {
   margin: 0;
-  font-family: var(--sds-typography-body-md-font-family);
-  font-size: var(--sds-typography-body-md-font-size);
-  font-weight: var(--sds-typography-body-md-font-weight);
-  line-height: var(--sds-typography-body-md-line-height);
-  letter-spacing: var(--sds-typography-body-md-letter-spacing);
-  text-transform: var(--sds-typography-body-md-text-transform);
-  color: var(--sds-color-content-muted);
+  font-family: var(--pds-typography-body-md-font-family);
+  font-size: var(--pds-typography-body-md-font-size);
+  font-weight: var(--pds-typography-body-md-font-weight);
+  line-height: var(--pds-typography-body-md-line-height);
+  letter-spacing: var(--pds-typography-body-md-letter-spacing);
+  text-transform: var(--pds-typography-body-md-text-transform);
+  color: var(--pds-color-content-muted);
 }
 
 /* Figma "Columns": a growing main column and a fixed aside. */
 .columns {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 20rem;
-  gap: var(--sds-space-8);
+  gap: var(--pds-space-8);
   align-items: start;
 }
 
@@ -69,58 +69,58 @@
 .column {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-6);
+  gap: var(--pds-space-6);
 }
 
 .sectionTitle {
   margin: 0;
-  font-family: var(--sds-typography-heading-lg-font-family);
-  font-size: var(--sds-typography-heading-lg-font-size);
-  font-weight: var(--sds-typography-heading-lg-font-weight);
-  line-height: var(--sds-typography-heading-lg-line-height);
-  letter-spacing: var(--sds-typography-heading-lg-letter-spacing);
-  text-transform: var(--sds-typography-heading-lg-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-heading-lg-font-family);
+  font-size: var(--pds-typography-heading-lg-font-size);
+  font-weight: var(--pds-typography-heading-lg-font-weight);
+  line-height: var(--pds-typography-heading-lg-line-height);
+  letter-spacing: var(--pds-typography-heading-lg-letter-spacing);
+  text-transform: var(--pds-typography-heading-lg-text-transform);
+  color: var(--pds-color-content-default);
 }
 
 /* Tabs.Panel brings its text style but no spacing from the list. */
 .tabPanel {
-  padding-block-start: var(--sds-space-4);
+  padding-block-start: var(--pds-space-4);
 }
 
 /* Figma "Guide": avatar and name side by side. */
 .guide {
   display: flex;
   align-items: center;
-  gap: var(--sds-space-3);
+  gap: var(--pds-space-3);
 }
 
 .guideName {
   margin: 0;
-  font-family: var(--sds-typography-title-sm-font-family);
-  font-size: var(--sds-typography-title-sm-font-size);
-  font-weight: var(--sds-typography-title-sm-font-weight);
-  line-height: var(--sds-typography-title-sm-line-height);
-  letter-spacing: var(--sds-typography-title-sm-letter-spacing);
-  text-transform: var(--sds-typography-title-sm-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-title-sm-font-family);
+  font-size: var(--pds-typography-title-sm-font-size);
+  font-weight: var(--pds-typography-title-sm-font-weight);
+  line-height: var(--pds-typography-title-sm-line-height);
+  letter-spacing: var(--pds-typography-title-sm-letter-spacing);
+  text-transform: var(--pds-typography-title-sm-text-transform);
+  color: var(--pds-color-content-default);
 }
 
 .guideRole {
   margin: 0;
-  font-family: var(--sds-typography-caption-font-family);
-  font-size: var(--sds-typography-caption-font-size);
-  font-weight: var(--sds-typography-caption-font-weight);
-  line-height: var(--sds-typography-caption-line-height);
-  letter-spacing: var(--sds-typography-caption-letter-spacing);
-  text-transform: var(--sds-typography-caption-text-transform);
-  color: var(--sds-color-content-muted);
+  font-family: var(--pds-typography-caption-font-family);
+  font-size: var(--pds-typography-caption-font-size);
+  font-weight: var(--pds-typography-caption-font-weight);
+  line-height: var(--pds-typography-caption-line-height);
+  letter-spacing: var(--pds-typography-caption-letter-spacing);
+  text-transform: var(--pds-typography-caption-text-transform);
+  color: var(--pds-color-content-muted);
 }
 
 /* Figma "Actions": Back and Continue. */
 .actions {
   display: flex;
-  gap: var(--sds-space-3);
+  gap: var(--pds-space-3);
 }
 
 .progress {

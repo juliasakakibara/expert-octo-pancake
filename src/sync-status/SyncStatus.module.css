@@ -3,14 +3,14 @@
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--sds-space-2);
+  gap: var(--pds-space-2);
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-2);
-  padding-inline-start: var(--sds-space-5);
+  gap: var(--pds-space-2);
+  padding-inline-start: var(--pds-space-5);
 }
 
 .note {

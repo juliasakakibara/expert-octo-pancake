@@ -14,20 +14,20 @@ type Story = StoryObj<typeof meta>;
 function Demo() {
   const [on, setOn] = useState(false);
   return (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-6)' }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-6)' }}>
       <div>
         <Button onClick={() => setOn((v) => !v)}>{on ? 'Move back' : 'Move'}</Button>
       </div>
       {(['fast', 'normal'] as const).map((speed) => (
         <div key={speed}>
-          <div style={{ ...mono, color: 'var(--sds-color-content-muted)', marginBottom: 'var(--sds-space-2)' }}>
-            --sds-duration-{speed}
+          <div style={{ ...mono, color: 'var(--pds-color-content-muted)', marginBottom: 'var(--pds-space-2)' }}>
+            --pds-duration-{speed}
           </div>
           <div
             style={{
               height: 44,
-              background: 'var(--sds-color-background-sunken)',
-              borderRadius: 'var(--sds-radius-md)',
+              background: 'var(--pds-color-background-sunken)',
+              borderRadius: 'var(--pds-radius-md)',
               position: 'relative',
               maxWidth: 480,
             }}
@@ -39,10 +39,10 @@ function Demo() {
                 left: 6,
                 width: 32,
                 height: 32,
-                borderRadius: 'var(--sds-radius-md)',
-                background: 'var(--sds-color-background-accent)',
+                borderRadius: 'var(--pds-radius-md)',
+                background: 'var(--pds-color-background-accent)',
                 transform: on ? 'translateX(420px)' : 'translateX(0)',
-                transition: `transform var(--sds-duration-${speed}) var(--sds-easing-standard)`,
+                transition: `transform var(--pds-duration-${speed}) var(--pds-easing-standard)`,
               }}
             />
           </div>
@@ -66,7 +66,7 @@ export const Durations: Story = {
         title="Easing"
         note="One curve, cubic-bezier(0.2, 0, 0, 1). It starts quickly and settles, which is what makes an interface feel responsive rather than floaty. A single curve across a system is worth more than a nuanced set nobody applies consistently."
       >
-        <div style={{ ...mono }}>--sds-easing-standard</div>
+        <div style={{ ...mono }}>--pds-easing-standard</div>
       </Group>
 
       <Group

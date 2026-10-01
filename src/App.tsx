@@ -13,15 +13,15 @@ export default function App() {
       style={{
         maxWidth: 480,
         margin: '0 auto',
-        padding: 'var(--sds-space-10) var(--sds-space-4)',
+        padding: 'var(--pds-space-10) var(--pds-space-4)',
         display: 'grid',
-        gap: 'var(--sds-space-6)',
+        gap: 'var(--pds-space-6)',
       }}
     >
-      <h1 style={{ margin: 0 }}>Sample Design System</h1>
+      <h1 style={{ margin: 0 }}>Pancake DS</h1>
       <TextField label="Email address" placeholder="you@example.com" />
       <Switch label="Email notifications" defaultChecked />
-      <div style={{ display: 'flex', gap: 'var(--sds-space-3)' }}>
+      <div style={{ display: 'flex', gap: 'var(--pds-space-3)' }}>
         <Button>Save changes</Button>
         <Dialog.Root>
           <Dialog.Trigger render={<Button variant="secondary">Open dialog</Button>} />

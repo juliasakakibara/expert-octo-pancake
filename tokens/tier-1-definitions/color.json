@@ -2,47 +2,47 @@
   "color": {
     "neutral": {
       "50": {
-        "$value": "#f8f9fa",
+        "$value": "#fafafa",
         "$type": "color"
       },
       "100": {
-        "$value": "#f1f3f5",
+        "$value": "#f3f3f3",
         "$type": "color"
       },
       "200": {
-        "$value": "#e9ecef",
+        "$value": "#ebebeb",
         "$type": "color"
       },
       "300": {
-        "$value": "#dee2e6",
+        "$value": "#e1e1e1",
         "$type": "color"
       },
       "400": {
-        "$value": "#ced4da",
+        "$value": "#d2d2d2",
         "$type": "color"
       },
       "500": {
-        "$value": "#adb5bd",
+        "$value": "#b2b2b2",
         "$type": "color"
       },
       "600": {
-        "$value": "#868e96",
+        "$value": "#8c8c8c",
         "$type": "color"
       },
       "700": {
-        "$value": "#495057",
+        "$value": "#4f4f4f",
         "$type": "color"
       },
       "800": {
-        "$value": "#343a40",
+        "$value": "#393939",
         "$type": "color"
       },
       "900": {
-        "$value": "#212529",
+        "$value": "#212121",
         "$type": "color"
       },
       "950": {
-        "$value": "#121416",
+        "$value": "#131313",
         "$type": "color"
       },
       "white": {
@@ -51,45 +51,45 @@
       }
     },
     "brand": {
-      "indigo": {
+      "blue": {
         "50": {
-          "$value": "#eef2ff",
+          "$value": "#eef4ff",
           "$type": "color"
         },
         "100": {
-          "$value": "#e0e7ff",
+          "$value": "#dae6ff",
           "$type": "color"
         },
         "200": {
-          "$value": "#c7d2fe",
+          "$value": "#bcd2ff",
           "$type": "color"
         },
         "300": {
-          "$value": "#a5b4fc",
+          "$value": "#8eb4ff",
           "$type": "color"
         },
         "400": {
-          "$value": "#818cf8",
+          "$value": "#5a8eff",
           "$type": "color"
         },
         "500": {
-          "$value": "#6366f1",
+          "$value": "#3071ff",
           "$type": "color"
         },
         "600": {
-          "$value": "#4f46e5",
+          "$value": "#0a5cff",
           "$type": "color"
         },
         "700": {
-          "$value": "#4338ca",
+          "$value": "#0047d6",
           "$type": "color"
         },
         "800": {
-          "$value": "#3730a3",
+          "$value": "#003aad",
           "$type": "color"
         },
         "900": {
-          "$value": "#312e81",
+          "$value": "#002f85",
           "$type": "color"
         }
       }

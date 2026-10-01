@@ -17,9 +17,9 @@ const releases = [
 ];
 
 const panelStyle: React.CSSProperties = {
-  border: '1px solid var(--sds-color-border-default)',
-  borderRadius: 'var(--sds-radius-md)',
-  background: 'var(--sds-color-background-surface)',
+  border: '1px solid var(--pds-color-border-default)',
+  borderRadius: 'var(--pds-radius-md)',
+  background: 'var(--pds-color-background-surface)',
 };
 
 const meta = {
@@ -39,21 +39,21 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => (
     <ScrollArea {...args} style={{ ...panelStyle, height: 240, width: 380 }}>
-      <div style={{ display: 'grid', gap: 'var(--sds-space-3)', padding: 'var(--sds-space-4)' }}>
+      <div style={{ display: 'grid', gap: 'var(--pds-space-3)', padding: 'var(--pds-space-4)' }}>
         {releases.map(([version, note]) => (
           <div key={version}>
             <div
               style={{
-                fontWeight: 'var(--sds-font-weight-medium)',
-                fontSize: 'var(--sds-font-size-sm)',
+                fontWeight: 'var(--pds-font-weight-medium)',
+                fontSize: 'var(--pds-font-size-sm)',
               }}
             >
               {version}
             </div>
             <div
               style={{
-                color: 'var(--sds-color-content-muted)',
-                fontSize: 'var(--sds-font-size-sm)',
+                color: 'var(--pds-color-content-muted)',
+                fontSize: 'var(--pds-font-size-sm)',
               }}
             >
               {note}
@@ -73,8 +73,8 @@ export const Horizontal: Story = {
       <div
         style={{
           display: 'flex',
-          gap: 'var(--sds-space-3)',
-          padding: 'var(--sds-space-4)',
+          gap: 'var(--pds-space-3)',
+          padding: 'var(--pds-space-4)',
           width: 'max-content',
         }}
       >
@@ -82,10 +82,10 @@ export const Horizontal: Story = {
           <div
             key={version}
             style={{
-              padding: 'var(--sds-space-2) var(--sds-space-3)',
-              border: '1px solid var(--sds-color-border-default)',
-              borderRadius: 'var(--sds-radius-full)',
-              fontSize: 'var(--sds-font-size-sm)',
+              padding: 'var(--pds-space-2) var(--pds-space-3)',
+              border: '1px solid var(--pds-color-border-default)',
+              borderRadius: 'var(--pds-radius-full)',
+              fontSize: 'var(--pds-font-size-sm)',
               whiteSpace: 'nowrap',
             }}
           >
@@ -102,13 +102,13 @@ export const Both: Story = {
   args: { orientation: 'both' },
   render: (args) => (
     <ScrollArea {...args} style={{ ...panelStyle, height: 240, width: 380 }}>
-      <div style={{ padding: 'var(--sds-space-4)', width: 'max-content' }}>
+      <div style={{ padding: 'var(--pds-space-4)', width: 'max-content' }}>
         {releases.map(([version, note]) => (
           <p
             key={version}
             style={{
-              margin: '0 0 var(--sds-space-3)',
-              fontSize: 'var(--sds-font-size-sm)',
+              margin: '0 0 var(--pds-space-3)',
+              fontSize: 'var(--pds-font-size-sm)',
               whiteSpace: 'nowrap',
             }}
           >
@@ -124,7 +124,7 @@ export const Both: Story = {
 export const NoOverflow: Story = {
   render: (args) => (
     <ScrollArea {...args} style={{ ...panelStyle, height: 240, width: 380 }}>
-      <div style={{ padding: 'var(--sds-space-4)', fontSize: 'var(--sds-font-size-sm)' }}>
+      <div style={{ padding: 'var(--pds-space-4)', fontSize: 'var(--pds-font-size-sm)' }}>
         Short enough to fit inside the viewport.
       </div>
     </ScrollArea>

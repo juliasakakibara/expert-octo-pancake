@@ -1,37 +1,37 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-1);
+  gap: var(--pds-space-1);
 }
 
 .label {
-  font-family: var(--sds-typography-label-md-font-family);
-  font-size: var(--sds-typography-label-md-font-size);
-  font-weight: var(--sds-typography-label-md-font-weight);
-  line-height: var(--sds-typography-label-md-line-height);
-  letter-spacing: var(--sds-typography-label-md-letter-spacing);
-  text-transform: var(--sds-typography-label-md-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-label-md-font-family);
+  font-size: var(--pds-typography-label-md-font-size);
+  font-weight: var(--pds-typography-label-md-font-weight);
+  line-height: var(--pds-typography-label-md-line-height);
+  letter-spacing: var(--pds-typography-label-md-letter-spacing);
+  text-transform: var(--pds-typography-label-md-text-transform);
+  color: var(--pds-color-content-default);
 }
 
 .description {
-  font-family: var(--sds-typography-caption-font-family);
-  font-size: var(--sds-typography-caption-font-size);
-  font-weight: var(--sds-typography-caption-font-weight);
-  line-height: var(--sds-typography-caption-line-height);
-  letter-spacing: var(--sds-typography-caption-letter-spacing);
-  text-transform: var(--sds-typography-caption-text-transform);
-  color: var(--sds-color-content-muted);
+  font-family: var(--pds-typography-caption-font-family);
+  font-size: var(--pds-typography-caption-font-size);
+  font-weight: var(--pds-typography-caption-font-weight);
+  line-height: var(--pds-typography-caption-line-height);
+  letter-spacing: var(--pds-typography-caption-letter-spacing);
+  text-transform: var(--pds-typography-caption-text-transform);
+  color: var(--pds-color-content-muted);
 }
 
 .error {
-  font-family: var(--sds-typography-caption-font-family);
-  font-size: var(--sds-typography-caption-font-size);
-  font-weight: var(--sds-typography-caption-font-weight);
-  line-height: var(--sds-typography-caption-line-height);
-  letter-spacing: var(--sds-typography-caption-letter-spacing);
-  text-transform: var(--sds-typography-caption-text-transform);
-  color: var(--sds-color-content-danger);
+  font-family: var(--pds-typography-caption-font-family);
+  font-size: var(--pds-typography-caption-font-size);
+  font-weight: var(--pds-typography-caption-font-weight);
+  line-height: var(--pds-typography-caption-line-height);
+  letter-spacing: var(--pds-typography-caption-letter-spacing);
+  text-transform: var(--pds-typography-caption-text-transform);
+  color: var(--pds-color-content-danger);
 }
 
 /* Trigger */
@@ -40,38 +40,38 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--sds-space-2);
+  gap: var(--pds-space-2);
   width: 100%;
   min-height: 40px;
   margin: 0;
-  padding: var(--sds-space-2) var(--sds-space-3);
-  background: var(--sds-color-background-surface);
-  color: var(--sds-color-content-default);
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-md);
-  font-family: var(--sds-typography-body-md-font-family);
-  font-size: var(--sds-typography-body-md-font-size);
-  font-weight: var(--sds-typography-body-md-font-weight);
-  line-height: var(--sds-typography-body-md-line-height);
-  letter-spacing: var(--sds-typography-body-md-letter-spacing);
-  text-transform: var(--sds-typography-body-md-text-transform);
+  padding: var(--pds-space-2) var(--pds-space-3);
+  background: var(--pds-color-background-surface);
+  color: var(--pds-color-content-default);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-md);
+  font-family: var(--pds-typography-body-md-font-family);
+  font-size: var(--pds-typography-body-md-font-size);
+  font-weight: var(--pds-typography-body-md-font-weight);
+  line-height: var(--pds-typography-body-md-line-height);
+  letter-spacing: var(--pds-typography-body-md-letter-spacing);
+  text-transform: var(--pds-typography-body-md-text-transform);
   text-align: start;
   cursor: pointer;
-  transition: border-color var(--sds-duration-fast) var(--sds-easing-standard);
+  transition: border-color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .trigger:hover:not([data-disabled]) {
-  border-color: var(--sds-color-border-strong);
+  border-color: var(--pds-color-border-strong);
 }
 
 .trigger:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
-  border-color: var(--sds-color-border-focus);
+  border-color: var(--pds-color-border-focus);
 }
 
 .trigger[data-popup-open] {
-  border-color: var(--sds-color-border-focus);
+  border-color: var(--pds-color-border-focus);
 }
 
 .trigger[data-disabled] {
@@ -80,7 +80,7 @@
 }
 
 .trigger[data-invalid] {
-  border-color: var(--sds-color-border-danger);
+  border-color: var(--pds-color-border-danger);
 }
 
 .valueWrapper {
@@ -97,14 +97,14 @@
 
 /* Base UI marks the value as a placeholder while nothing is selected. */
 .value[data-placeholder] {
-  color: var(--sds-color-content-muted);
+  color: var(--pds-color-content-muted);
 }
 
 .icon {
   display: inline-flex;
   flex: none;
-  color: var(--sds-color-content-muted);
-  transition: transform var(--sds-duration-fast) var(--sds-easing-standard);
+  color: var(--pds-color-content-muted);
+  transition: transform var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .trigger[data-popup-open] .icon {
@@ -123,16 +123,16 @@
   position: relative;
   min-width: var(--anchor-width);
   max-width: var(--available-width);
-  padding: var(--sds-space-1);
-  background: var(--sds-color-background-surface);
-  color: var(--sds-color-content-default);
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-md);
-  box-shadow: var(--sds-elevation-overlay);
+  padding: var(--pds-space-1);
+  background: var(--pds-color-background-surface);
+  color: var(--pds-color-content-default);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-md);
+  box-shadow: var(--pds-elevation-overlay);
   transform-origin: var(--transform-origin);
   transition:
-    opacity var(--sds-duration-fast) var(--sds-easing-standard),
-    transform var(--sds-duration-fast) var(--sds-easing-standard);
+    opacity var(--pds-duration-fast) var(--pds-easing-standard),
+    transform var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .popup[data-starting-style],
@@ -164,11 +164,11 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-0);
-  max-height: calc(var(--available-height) - var(--sds-space-2));
+  gap: var(--pds-space-0);
+  max-height: calc(var(--available-height) - var(--pds-space-2));
   overflow-y: auto;
   overscroll-behavior: contain;
-  scroll-padding-block: var(--sds-space-5);
+  scroll-padding-block: var(--pds-space-5);
 }
 
 /*
@@ -181,9 +181,9 @@
   align-items: center;
   justify-content: center;
   inset-inline: 0;
-  height: var(--sds-space-5);
-  background: var(--sds-color-background-surface);
-  color: var(--sds-color-content-muted);
+  height: var(--pds-space-5);
+  background: var(--pds-color-background-surface);
+  color: var(--pds-color-content-muted);
   cursor: default;
 }
 
@@ -201,28 +201,28 @@
   display: grid;
   grid-template-columns: 1rem 1fr;
   align-items: center;
-  gap: var(--sds-space-2);
-  padding: var(--sds-space-2) var(--sds-space-3);
-  border-radius: var(--sds-radius-sm);
-  color: var(--sds-color-content-default);
-  font-family: var(--sds-typography-body-md-font-family);
-  font-size: var(--sds-typography-body-md-font-size);
-  font-weight: var(--sds-typography-body-md-font-weight);
-  line-height: var(--sds-typography-body-md-line-height);
-  letter-spacing: var(--sds-typography-body-md-letter-spacing);
-  text-transform: var(--sds-typography-body-md-text-transform);
+  gap: var(--pds-space-2);
+  padding: var(--pds-space-2) var(--pds-space-3);
+  border-radius: var(--pds-radius-sm);
+  color: var(--pds-color-content-default);
+  font-family: var(--pds-typography-body-md-font-family);
+  font-size: var(--pds-typography-body-md-font-size);
+  font-weight: var(--pds-typography-body-md-font-weight);
+  line-height: var(--pds-typography-body-md-line-height);
+  letter-spacing: var(--pds-typography-body-md-letter-spacing);
+  text-transform: var(--pds-typography-body-md-text-transform);
   cursor: pointer;
   user-select: none;
-  scroll-margin: var(--sds-space-1);
+  scroll-margin: var(--pds-space-1);
 }
 
 .item[data-highlighted] {
-  background: var(--sds-color-background-accent);
-  color: var(--sds-color-content-on-accent);
+  background: var(--pds-color-background-accent);
+  color: var(--pds-color-content-on-accent);
 }
 
 .item[data-selected] {
-  font-weight: var(--sds-font-weight-medium);
+  font-weight: var(--pds-font-weight-medium);
 }
 
 .item[data-disabled] {
@@ -231,7 +231,7 @@
 }
 
 .item:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }
 
@@ -250,12 +250,12 @@
 }
 
 .groupLabel {
-  padding: var(--sds-space-2) var(--sds-space-3) var(--sds-space-1);
-  color: var(--sds-color-content-muted);
-  font-family: var(--sds-typography-overline-font-family);
-  font-size: var(--sds-typography-overline-font-size);
-  font-weight: var(--sds-typography-overline-font-weight);
-  line-height: var(--sds-typography-overline-line-height);
-  letter-spacing: var(--sds-typography-overline-letter-spacing);
-  text-transform: var(--sds-typography-overline-text-transform);
+  padding: var(--pds-space-2) var(--pds-space-3) var(--pds-space-1);
+  color: var(--pds-color-content-muted);
+  font-family: var(--pds-typography-overline-font-family);
+  font-size: var(--pds-typography-overline-font-size);
+  font-weight: var(--pds-typography-overline-font-weight);
+  line-height: var(--pds-typography-overline-line-height);
+  letter-spacing: var(--pds-typography-overline-letter-spacing);
+  text-transform: var(--pds-typography-overline-text-transform);
 }

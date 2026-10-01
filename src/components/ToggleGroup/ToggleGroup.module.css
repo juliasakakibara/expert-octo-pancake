@@ -1,7 +1,7 @@
 .root {
   display: inline-flex;
   align-items: center;
-  gap: var(--sds-space-2);
+  gap: var(--pds-space-2);
 }
 
 .root[data-orientation='vertical'] {
@@ -18,38 +18,38 @@
    own class names are scoped to its own module. */
 .segmented {
   gap: 0;
-  padding: var(--sds-space-1);
-  background: var(--sds-color-background-sunken);
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-md);
+  padding: var(--pds-space-1);
+  background: var(--pds-color-background-sunken);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-md);
 }
 
 .segmented > button {
   background: transparent;
   border-color: transparent;
   box-shadow: none;
-  color: var(--sds-color-content-muted);
-  border-radius: var(--sds-radius-sm);
+  color: var(--pds-color-content-muted);
+  border-radius: var(--pds-radius-sm);
   flex: 1;
 }
 
 .segmented > button:hover:not([data-disabled]) {
   background: transparent;
   border-color: transparent;
-  color: var(--sds-color-content-default);
+  color: var(--pds-color-content-default);
 }
 
 .segmented > button[data-pressed] {
-  background: var(--sds-color-background-surface);
-  border-color: var(--sds-color-border-default);
-  color: var(--sds-color-content-default);
-  box-shadow: var(--sds-elevation-raised);
+  background: var(--pds-color-background-surface);
+  border-color: var(--pds-color-border-default);
+  color: var(--pds-color-content-default);
+  box-shadow: var(--pds-elevation-raised);
 }
 
 .segmented > button[data-pressed]:hover:not([data-disabled]) {
-  background: var(--sds-color-background-surface);
-  border-color: var(--sds-color-border-strong);
-  color: var(--sds-color-content-default);
+  background: var(--pds-color-background-surface);
+  border-color: var(--pds-color-border-strong);
+  color: var(--pds-color-content-default);
 }
 
 .segmented[data-orientation='vertical'] > button {

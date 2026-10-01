@@ -1,0 +1,275 @@
+/*
+ * Layout for the Overview page (Figma: Overview, 110:97). The page is built
+ * from the system's own components; this file places them with the layout
+ * words from docs/layout.md. Semantic tokens only, whole text styles.
+ *
+ * The Figma frame is a 1680px poster with display sizes (96px, 48px) that no
+ * text style holds. Each is mapped to the nearest style instead of inventing
+ * one: title -> heading-xl, section heads -> heading-lg, card titles -> title-md.
+ */
+
+/* Page · a Stack of sections, space/12 apart (the largest step; Figma has 112px). */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-space-12);
+  max-width: 72rem;
+  margin: 0 auto;
+  /* The docs frame already pads the sides. */
+  padding: var(--pds-space-12) 0;
+  color: var(--pds-color-content-default);
+  font-family: var(--pds-font-sans);
+}
+
+/* Stack · space/4. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-space-4);
+}
+
+/* Section · heading, then content, space/8 apart. */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-space-8);
+}
+
+/* Cluster · space/3. */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--pds-space-3);
+}
+
+/* Columns · 2 / 3 / 6, collapsing on narrow screens. */
+.columns2,
+.columns3,
+.columns6 {
+  display: grid;
+  gap: var(--pds-space-6);
+}
+.columns2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+.columns3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+.columns6 { grid-template-columns: repeat(6, 1fr); }
+
+/* A tile: bordered surface, content stacked. */
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-space-2);
+  padding: var(--pds-space-6);
+  background: var(--pds-color-background-surface);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-lg);
+}
+.tileRoomy {
+  gap: var(--pds-space-3);
+  padding: var(--pds-space-8);
+}
+
+/* The source of truth, set apart in the accent. */
+.source {
+  composes: tile tileRoomy;
+  justify-content: center;
+  background: var(--pds-color-background-accent-subtle);
+  border-color: var(--pds-color-border-accent);
+}
+
+.dot {
+  width: var(--pds-space-3);
+  height: var(--pds-space-3);
+  border-radius: var(--pds-radius-full);
+  background: var(--pds-color-background-accent);
+}
+
+.link {
+  color: var(--pds-color-content-accent);
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+.link:focus-visible {
+  outline: 2px solid var(--pds-color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--pds-radius-sm);
+}
+
+/* Numbered list: number, then text, rules between. */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pds-space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.item {
+  display: flex;
+  gap: var(--pds-space-4);
+  align-items: baseline;
+}
+
+/* Flow: source card, then two rows of steps. */
+.flow {
+  display: grid;
+  grid-template-columns: minmax(14rem, 18rem) 1fr;
+  gap: var(--pds-space-6);
+  align-items: stretch;
+}
+.rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--pds-space-6);
+}
+.row {
+  display: grid;
+  grid-template-columns: auto 5.5rem 1fr auto 1fr auto 1fr;
+  gap: var(--pds-space-3);
+  align-items: center;
+}
+.row > :nth-child(2) { justify-self: start; }
+.step {
+  composes: tile;
+  gap: var(--pds-space-1);
+  padding: var(--pds-space-4);
+  border-radius: var(--pds-radius-md);
+}
+.arrow {
+  color: var(--pds-color-content-muted);
+}
+
+/* Tiers: two cards with an arrow between. */
+.tiers {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--pds-space-6);
+  align-items: center;
+}
+.example {
+  display: flex;
+  gap: var(--pds-space-4);
+  align-items: center;
+  padding: var(--pds-space-4);
+  background: var(--pds-color-background-default);
+  border-radius: var(--pds-radius-md);
+}
+.swatch {
+  width: var(--pds-space-12);
+  height: var(--pds-space-12);
+  border-radius: var(--pds-radius-md);
+  border: 1px solid var(--pds-color-border-default);
+}
+/* Components may not paint a primitive, so the tier-1 swatch shows the role
+   it feeds; the tier-2 pair re-scopes [data-theme] to show Light and Dark. */
+.swatch { background: var(--pds-color-background-accent); }
+
+/* Repository tree. */
+.tree {
+  margin: 0;
+  padding: var(--pds-space-8);
+  overflow-x: auto;
+  background: var(--pds-color-background-sunken);
+  border-radius: var(--pds-radius-lg);
+  color: var(--pds-color-content-muted);
+}
+.tree strong { color: var(--pds-color-content-default); }
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--pds-space-4);
+  color: var(--pds-color-content-muted);
+}
+
+.muted { color: var(--pds-color-content-muted); }
+/* Long URLs and paths break rather than push the page sideways. */
+.url { overflow-wrap: anywhere; }
+.accent { color: var(--pds-color-content-accent); }
+.p { margin: 0; }
+
+@media (max-width: 60rem) {
+  .columns6 { grid-template-columns: repeat(3, 1fr); }
+  .flow,
+  .tiers { grid-template-columns: 1fr; }
+  .tiers > .arrow { transform: rotate(90deg); justify-self: center; }
+  .row { grid-template-columns: 5.5rem 1fr; }
+  .row > .arrow { display: none; }
+}
+
+/* Text styles, each applied whole (CLAUDE.md rule 1). */
+.headingXl {
+  font-family: var(--pds-typography-heading-xl-font-family);
+  font-size: var(--pds-typography-heading-xl-font-size);
+  font-weight: var(--pds-typography-heading-xl-font-weight);
+  line-height: var(--pds-typography-heading-xl-line-height);
+  letter-spacing: var(--pds-typography-heading-xl-letter-spacing);
+  text-transform: var(--pds-typography-heading-xl-text-transform);
+}
+.headingLg {
+  font-family: var(--pds-typography-heading-lg-font-family);
+  font-size: var(--pds-typography-heading-lg-font-size);
+  font-weight: var(--pds-typography-heading-lg-font-weight);
+  line-height: var(--pds-typography-heading-lg-line-height);
+  letter-spacing: var(--pds-typography-heading-lg-letter-spacing);
+  text-transform: var(--pds-typography-heading-lg-text-transform);
+}
+.titleMd {
+  font-family: var(--pds-typography-title-md-font-family);
+  font-size: var(--pds-typography-title-md-font-size);
+  font-weight: var(--pds-typography-title-md-font-weight);
+  line-height: var(--pds-typography-title-md-line-height);
+  letter-spacing: var(--pds-typography-title-md-letter-spacing);
+  text-transform: var(--pds-typography-title-md-text-transform);
+}
+.titleSm {
+  font-family: var(--pds-typography-title-sm-font-family);
+  font-size: var(--pds-typography-title-sm-font-size);
+  font-weight: var(--pds-typography-title-sm-font-weight);
+  line-height: var(--pds-typography-title-sm-line-height);
+  letter-spacing: var(--pds-typography-title-sm-letter-spacing);
+  text-transform: var(--pds-typography-title-sm-text-transform);
+}
+.bodyMd {
+  font-family: var(--pds-typography-body-md-font-family);
+  font-size: var(--pds-typography-body-md-font-size);
+  font-weight: var(--pds-typography-body-md-font-weight);
+  line-height: var(--pds-typography-body-md-line-height);
+  letter-spacing: var(--pds-typography-body-md-letter-spacing);
+  text-transform: var(--pds-typography-body-md-text-transform);
+}
+.bodySm {
+  font-family: var(--pds-typography-body-sm-font-family);
+  font-size: var(--pds-typography-body-sm-font-size);
+  font-weight: var(--pds-typography-body-sm-font-weight);
+  line-height: var(--pds-typography-body-sm-line-height);
+  letter-spacing: var(--pds-typography-body-sm-letter-spacing);
+  text-transform: var(--pds-typography-body-sm-text-transform);
+}
+.overline {
+  font-family: var(--pds-typography-overline-font-family);
+  font-size: var(--pds-typography-overline-font-size);
+  font-weight: var(--pds-typography-overline-font-weight);
+  line-height: var(--pds-typography-overline-line-height);
+  letter-spacing: var(--pds-typography-overline-letter-spacing);
+  text-transform: var(--pds-typography-overline-text-transform);
+}
+.codeSm {
+  font-family: var(--pds-typography-code-sm-font-family);
+  font-size: var(--pds-typography-code-sm-font-size);
+  font-weight: var(--pds-typography-code-sm-font-weight);
+  line-height: var(--pds-typography-code-sm-line-height);
+  letter-spacing: var(--pds-typography-code-sm-letter-spacing);
+  text-transform: var(--pds-typography-code-sm-text-transform);
+}
+/* Inline code inside running text: the code-sm style, in the accent. */
+.code {
+  composes: codeSm;
+  color: var(--pds-color-content-accent);
+}
+
+@media (max-width: 30rem) {
+  .columns6 { grid-template-columns: repeat(2, 1fr); }
+}

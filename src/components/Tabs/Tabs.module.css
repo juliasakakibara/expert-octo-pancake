@@ -1,29 +1,29 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-4);
-  font-family: var(--sds-font-sans);
-  color: var(--sds-color-content-default);
+  gap: var(--pds-space-4);
+  font-family: var(--pds-font-sans);
+  color: var(--pds-color-content-default);
 }
 
 .root[data-orientation='vertical'] {
   flex-direction: row;
-  gap: var(--sds-space-6);
+  gap: var(--pds-space-6);
 }
 
 .list {
   position: relative;
   display: flex;
   align-items: center;
-  gap: var(--sds-space-1);
-  box-shadow: inset 0 -1px 0 0 var(--sds-color-border-default);
+  gap: var(--pds-space-1);
+  box-shadow: inset 0 -1px 0 0 var(--pds-color-border-default);
 }
 
 .list[data-orientation='vertical'] {
   flex-direction: column;
   align-items: stretch;
   min-width: 10rem;
-  box-shadow: inset -1px 0 0 0 var(--sds-color-border-default);
+  box-shadow: inset -1px 0 0 0 var(--pds-color-border-default);
 }
 
 .tab {
@@ -31,38 +31,38 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--sds-space-2);
-  padding: var(--sds-space-2) var(--sds-space-3);
+  gap: var(--pds-space-2);
+  padding: var(--pds-space-2) var(--pds-space-3);
   min-height: 40px;
   border: none;
-  border-radius: var(--sds-radius-sm) var(--sds-radius-sm) 0 0;
+  border-radius: var(--pds-radius-sm) var(--pds-radius-sm) 0 0;
   background: transparent;
-  color: var(--sds-color-content-muted);
-  font-family: var(--sds-typography-label-md-font-family);
-  font-size: var(--sds-typography-label-md-font-size);
-  font-weight: var(--sds-typography-label-md-font-weight);
-  line-height: var(--sds-typography-label-md-line-height);
-  letter-spacing: var(--sds-typography-label-md-letter-spacing);
-  text-transform: var(--sds-typography-label-md-text-transform);
+  color: var(--pds-color-content-muted);
+  font-family: var(--pds-typography-label-md-font-family);
+  font-size: var(--pds-typography-label-md-font-size);
+  font-weight: var(--pds-typography-label-md-font-weight);
+  line-height: var(--pds-typography-label-md-line-height);
+  letter-spacing: var(--pds-typography-label-md-letter-spacing);
+  text-transform: var(--pds-typography-label-md-text-transform);
   white-space: nowrap;
   cursor: pointer;
   transition:
-    color var(--sds-duration-fast) var(--sds-easing-standard),
-    background-color var(--sds-duration-fast) var(--sds-easing-standard);
+    color var(--pds-duration-fast) var(--pds-easing-standard),
+    background-color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .list[data-orientation='vertical'] .tab {
   justify-content: flex-start;
-  border-radius: var(--sds-radius-sm) 0 0 var(--sds-radius-sm);
+  border-radius: var(--pds-radius-sm) 0 0 var(--pds-radius-sm);
 }
 
 .tab:hover:not([data-disabled]) {
-  color: var(--sds-color-content-default);
-  background: var(--sds-color-background-sunken);
+  color: var(--pds-color-content-default);
+  background: var(--pds-color-background-sunken);
 }
 
 .tab:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }
 
@@ -72,7 +72,7 @@
  * never match.
  */
 .tab[data-active] {
-  color: var(--sds-color-content-accent);
+  color: var(--pds-color-content-accent);
 }
 
 .tab[data-disabled] {
@@ -83,12 +83,12 @@
 .indicator {
   position: absolute;
   z-index: 1;
-  background: var(--sds-color-background-accent);
-  border-radius: var(--sds-radius-full);
+  background: var(--pds-color-background-accent);
+  border-radius: var(--pds-radius-full);
   transition:
-    translate var(--sds-duration-normal) var(--sds-easing-standard),
-    width var(--sds-duration-normal) var(--sds-easing-standard),
-    height var(--sds-duration-normal) var(--sds-easing-standard);
+    translate var(--pds-duration-normal) var(--pds-easing-standard),
+    width var(--pds-duration-normal) var(--pds-easing-standard),
+    height var(--pds-duration-normal) var(--pds-easing-standard);
 }
 
 .indicator[data-orientation='horizontal'] {
@@ -108,16 +108,16 @@
 }
 
 .panel {
-  color: var(--sds-color-content-default);
-  font-family: var(--sds-typography-body-md-font-family);
-  font-size: var(--sds-typography-body-md-font-size);
-  font-weight: var(--sds-typography-body-md-font-weight);
-  line-height: var(--sds-typography-body-md-line-height);
-  letter-spacing: var(--sds-typography-body-md-letter-spacing);
-  text-transform: var(--sds-typography-body-md-text-transform);
+  color: var(--pds-color-content-default);
+  font-family: var(--pds-typography-body-md-font-family);
+  font-size: var(--pds-typography-body-md-font-size);
+  font-weight: var(--pds-typography-body-md-font-weight);
+  line-height: var(--pds-typography-body-md-line-height);
+  letter-spacing: var(--pds-typography-body-md-letter-spacing);
+  text-transform: var(--pds-typography-body-md-text-transform);
 }
 
 .panel:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }

@@ -11,13 +11,13 @@
 
 body {
   margin: 0;
-  background: var(--sds-color-background-default);
-  color: var(--sds-color-content-default);
-  font-family: var(--sds-typography-body-md-font-family);
-  font-size: var(--sds-typography-body-md-font-size);
-  font-weight: var(--sds-typography-body-md-font-weight);
-  line-height: var(--sds-typography-body-md-line-height);
-  letter-spacing: var(--sds-typography-body-md-letter-spacing);
-  text-transform: var(--sds-typography-body-md-text-transform);
+  background: var(--pds-color-background-default);
+  color: var(--pds-color-content-default);
+  font-family: var(--pds-typography-body-md-font-family);
+  font-size: var(--pds-typography-body-md-font-size);
+  font-weight: var(--pds-typography-body-md-font-weight);
+  line-height: var(--pds-typography-body-md-line-height);
+  letter-spacing: var(--pds-typography-body-md-letter-spacing);
+  text-transform: var(--pds-typography-body-md-text-transform);
   -webkit-font-smoothing: antialiased;
 }

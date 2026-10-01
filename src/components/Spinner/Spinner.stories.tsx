@@ -29,7 +29,7 @@ export const CustomLabel: Story = {
 export const Sizes: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'flex', gap: 'var(--sds-space-5)', alignItems: 'center' }}>
+    <div style={{ display: 'flex', gap: 'var(--pds-space-5)', alignItems: 'center' }}>
       {(['sm', 'md', 'lg'] as const).map((size) => (
         <Spinner key={size} size={size} aria-label={`Loading, ${size}`} />
       ))}
@@ -44,11 +44,11 @@ export const InheritsColor: Story = {
     <div
       style={{
         display: 'flex',
-        gap: 'var(--sds-space-3)',
+        gap: 'var(--pds-space-3)',
         alignItems: 'center',
-        color: 'var(--sds-color-content-muted)',
-        fontFamily: 'var(--sds-font-sans)',
-        fontSize: 'var(--sds-font-size-sm)',
+        color: 'var(--pds-color-content-muted)',
+        fontFamily: 'var(--pds-font-sans)',
+        fontSize: 'var(--pds-font-size-sm)',
       }}
     >
       <Spinner size="sm" aria-label="Checking availability" />

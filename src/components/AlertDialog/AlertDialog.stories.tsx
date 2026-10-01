@@ -126,7 +126,7 @@ function MemberList(args: AlertDialogContentProps) {
   const [pending, setPending] = useState<Member | null>(null);
 
   return (
-    <div style={{ width: 320, display: 'grid', gap: 'var(--sds-space-2)' }}>
+    <div style={{ width: 320, display: 'grid', gap: 'var(--pds-space-2)' }}>
       {members.map((member) => (
         <div
           key={member.id}
@@ -134,13 +134,13 @@ function MemberList(args: AlertDialogContentProps) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: 'var(--sds-space-3)',
-            padding: 'var(--sds-space-2) var(--sds-space-3)',
-            border: '1px solid var(--sds-color-border-default)',
-            borderRadius: 'var(--sds-radius-md)',
-            background: 'var(--sds-color-background-surface)',
-            fontFamily: 'var(--sds-font-sans)',
-            fontSize: 'var(--sds-font-size-sm)',
+            gap: 'var(--pds-space-3)',
+            padding: 'var(--pds-space-2) var(--pds-space-3)',
+            border: '1px solid var(--pds-color-border-default)',
+            borderRadius: 'var(--pds-radius-md)',
+            background: 'var(--pds-color-background-surface)',
+            fontFamily: 'var(--pds-font-sans)',
+            fontSize: 'var(--pds-font-size-sm)',
           }}
         >
           <span>{member.name}</span>
@@ -168,7 +168,7 @@ function MemberList(args: AlertDialogContentProps) {
       ))}
 
       {members.length === 0 ? (
-        <p style={{ fontFamily: 'var(--sds-font-sans)', color: 'var(--sds-color-content-muted)' }}>
+        <p style={{ fontFamily: 'var(--pds-font-sans)', color: 'var(--pds-color-content-muted)' }}>
           Everyone has been removed. Reload the story to start again.
         </p>
       ) : null}

@@ -29,7 +29,7 @@ const TOKENS_CSS = ['src/tokens/primitives.css', 'src/tokens/semantic.css'];
 const defined = new Set();
 for (const f of TOKENS_CSS) {
   if (!existsSync(f)) continue;
-  for (const m of readFileSync(f, 'utf8').matchAll(/^\s*(--sds-[\w-]+)\s*:/gm)) defined.add(m[1]);
+  for (const m of readFileSync(f, 'utf8').matchAll(/^\s*(--pds-[\w-]+)\s*:/gm)) defined.add(m[1]);
 }
 
 /**
@@ -42,8 +42,8 @@ for (const f of TOKENS_CSS) {
  * so size, line height and letter spacing are checked there instead.
  */
 const isPrimitive = (t) =>
-  /^--sds-color-(neutral-(white|\d+)|brand-[a-z]+-\d+|utility-[a-z]+-\d+)$/.test(t) ||
-  /^--sds-shadow-/.test(t);
+  /^--pds-color-(neutral-(white|\d+)|brand-[a-z]+-\d+|utility-[a-z]+-\d+)$/.test(t) ||
+  /^--pds-shadow-/.test(t);
 
 for (const file of files) {
   if (/^src\/tokens\/(primitives|semantic|\.semantic\.[\w-]+)\.css$/.test(file)) continue; // generated
@@ -57,16 +57,16 @@ for (const file of files) {
     const n = i + 1;
 
     // 1. every token referenced must exist
-    for (const m of line.matchAll(/var\((--sds-[\w-]+)\)/g)) {
+    for (const m of line.matchAll(/var\((--pds-[\w-]+)\)/g)) {
       if (!defined.has(m[1])) report(file, n, 'unknown-token', `${m[1]} is not defined in the token layer`);
     }
 
     // 2. components may not reach past the semantic layer
     if (!isFoundation) {
-      for (const m of line.matchAll(/var\((--sds-[\w-]+)\)/g)) {
+      for (const m of line.matchAll(/var\((--pds-[\w-]+)\)/g)) {
         if (isPrimitive(m[1])) {
           report(file, n, 'primitive-in-component',
-            `${m[1]} is a tier-1 token; use a semantic one (e.g. --sds-elevation-* instead of --sds-shadow-*)`);
+            `${m[1]} is a tier-1 token; use a semantic one (e.g. --pds-elevation-* instead of --pds-shadow-*)`);
         }
       }
     }
@@ -80,10 +80,10 @@ for (const file of files) {
       const value = decl?.[1];
       if (value && !/url\(|data:/.test(value)) {
         if (/#[0-9a-fA-F]{3,8}\b/.test(value)) {
-          report(file, n, 'raw-colour', 'hard-coded hex — use a --sds-color-* token');
+          report(file, n, 'raw-colour', 'hard-coded hex — use a --pds-color-* token');
         }
-        if (/\b(rgb|rgba|hsl|hsla)\(/.test(value) && !/var\(--sds-/.test(value)) {
-          report(file, n, 'raw-colour', 'hard-coded colour function — use a --sds-color-* token');
+        if (/\b(rgb|rgba|hsl|hsla)\(/.test(value) && !/var\(--pds-/.test(value)) {
+          report(file, n, 'raw-colour', 'hard-coded colour function — use a --pds-color-* token');
         }
       }
     }
@@ -99,9 +99,9 @@ for (const file of files) {
     if (file.startsWith('src/components/') && file.endsWith('.module.css')) {
       if (line.includes('{')) typeAllowed = false;
       if (line.includes('validate-allow: type')) typeAllowed = true;
-      for (const m of typeAllowed ? [] : line.matchAll(/var\((--sds-(?:font-size|line-height|letter-spacing)-[\w-]+)\)/g)) {
+      for (const m of typeAllowed ? [] : line.matchAll(/var\((--pds-(?:font-size|line-height|letter-spacing)-[\w-]+)\)/g)) {
         report(file, n, 'raw-type-in-component',
-          `${m[1]} — use a text style (--sds-typography-<style>-*), so code and the Figma text styles stay one decision`);
+          `${m[1]} — use a text style (--pds-typography-<style>-*), so code and the Figma text styles stay one decision`);
       }
     }
 
@@ -135,7 +135,7 @@ const TEXT_STYLE_PROPS = ['font-family', 'font-size', 'font-weight', 'line-heigh
 for (const file of files.filter((f) => f.startsWith('src/components/') && f.endsWith('.module.css'))) {
   const src = readFileSync(file, 'utf8');
   for (const m of src.matchAll(/([^{}]+)\{([^}]*)\}/g)) {
-    const used = [...m[2].matchAll(/([a-z-]+)\s*:\s*var\(--sds-typography-([a-z0-9-]+?)-(font-family|font-size|font-weight|line-height|letter-spacing|text-transform)\)/g)];
+    const used = [...m[2].matchAll(/([a-z-]+)\s*:\s*var\(--pds-typography-([a-z0-9-]+?)-(font-family|font-size|font-weight|line-height|letter-spacing|text-transform)\)/g)];
     if (!used.length) continue;
     const selector = m[1].replace(/\/\*[\s\S]*?\*\//g, '').trim().replace(/\s+/g, ' ');
     const line = src.slice(0, m.index + m[1].length).split('\n').length;
@@ -154,8 +154,8 @@ for (const file of files.filter((f) => f.startsWith('src/components/') && f.ends
 // ------------------------------------------------------ token names in docs
 // Prose names tokens without `var()`. A renamed token left in a doc teaches the
 // next reader — and the next agent — a name that no longer exists, which is how
-// `--sds-color-focus-ring` survived the colour rename. Wildcards and patterns
-// (`--sds-space-*`, `--sds-typography-<style>-*`) are skipped: the character
+// `--pds-color-focus-ring` survived the colour rename. Wildcards and patterns
+// (`--pds-space-*`, `--pds-typography-<style>-*`) are skipped: the character
 // after the name is `-`.
 const DOCS = [
   'CLAUDE.md', 'CONTRIBUTING.md', 'README.md',
@@ -163,7 +163,7 @@ const DOCS = [
 ].filter((f) => f && existsSync(f));
 for (const file of DOCS) {
   readFileSync(file, 'utf8').split('\n').forEach((line, i) => {
-    for (const m of line.matchAll(/--sds-[a-z0-9]+(?:-[a-z0-9]+)*/g)) {
+    for (const m of line.matchAll(/--pds-[a-z0-9]+(?:-[a-z0-9]+)*/g)) {
       if (line[m.index + m[0].length] === '-') continue;
       if (!defined.has(m[0])) report(file, i + 1, 'unknown-token-in-docs', `${m[0]} is not defined in the token layer`);
     }
@@ -215,7 +215,7 @@ if (existsSync(FIGMA_MANIFEST)) {
   // Code syntax: exactly the CSS variable the token generates, and it exists.
   for (const [name, v] of expectedVars) {
     if (!figmaVars.has(name)) continue;
-    const actual = name in fm.codeSyntaxExceptions ? fm.codeSyntaxExceptions[name] : `var(--sds-${name.replace(/\//g, '-')})`;
+    const actual = name in fm.codeSyntaxExceptions ? fm.codeSyntaxExceptions[name] : `var(--pds-${name.replace(/\//g, '-')})`;
     if (actual !== v.web) report(F, 0, 'figma-code-syntax', `${name} points at ${actual}, expected ${v.web}`);
     else if (v.web && !defined.has(v.web.slice(4, -1))) report(F, 0, 'figma-code-syntax', `${name} → ${v.web} is not defined in the token layer`);
   }

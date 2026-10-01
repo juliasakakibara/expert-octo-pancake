@@ -45,14 +45,14 @@ export const NotProgress: Story = {
   name: 'Meter vs Progress',
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-5)' }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-5)' }}>
       <Meter label="Disk used — a reading that can go up or down" value={68} showValue />
       <p
         style={{
           margin: 0,
-          fontFamily: 'var(--sds-font-sans)',
-          fontSize: 'var(--sds-font-size-sm)',
-          color: 'var(--sds-color-content-muted)',
+          fontFamily: 'var(--pds-font-sans)',
+          fontSize: 'var(--pds-font-size-sm)',
+          color: 'var(--pds-color-content-muted)',
         }}
       >
         Use Progress instead when a task is running and will reach 100% on its own.
@@ -63,12 +63,12 @@ export const NotProgress: Story = {
 
 /**
  * Threshold colour change. The same component crosses 85% and switches to
- * `--sds-color-content-danger`, so the colour says what the number says.
+ * `--pds-color-content-danger`, so the colour says what the number says.
  */
 export const Threshold: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-5)' }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-5)' }}>
       {[20, 60, 84, 92, 99].map((value) => (
         <Meter
           key={value}
@@ -91,7 +91,7 @@ export const Danger: Story = {
 export const Extremes: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-5)' }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-5)' }}>
       <Meter label="Empty" value={0} showValue />
       <Meter label="Full" value={100} variant="danger" showValue />
     </div>
