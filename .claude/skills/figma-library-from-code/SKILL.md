@@ -22,7 +22,7 @@ already right; for another system, change them here and in `config.mjs`.
 
 | Setting | In ds-base-ui | What it is |
 | --- | --- | --- |
-| Library file | `sample-design-system` (`iMysuIxqcsHZ4OpffFKYMp`) | The Figma file that holds the library |
+| Library file | `pancake-ds` (`iMysuIxqcsHZ4OpffFKYMp`) | The Figma file that holds the library |
 | Scripts | `scripts/figma/`, settings in `config.mjs` | This skill's scripts: token prefix, token files, component folder, fonts |
 | Tokens | `tokens/` (DTCG): `tier-1-definitions/`, `tier-2-usage/semantic.light.json` and `.dark.json`, `text-style.json` | Where design decisions live |
 | Components | `src/components/<Name>/<Name>.tsx` and `<Name>.module.css` | One folder per component |
