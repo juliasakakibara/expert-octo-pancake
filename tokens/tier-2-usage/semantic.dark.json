@@ -37,19 +37,19 @@
         "$value": "{color.utility.red.300}"
       },
       "danger-subtle": {
-        "$value": "{color.utility.red.700}"
+        "$value": "{color.utility.red.950}"
       },
       "success": {
         "$value": "{color.utility.green.500}"
       },
       "success-subtle": {
-        "$value": "{color.utility.green.700}"
+        "$value": "{color.utility.green.950}"
       },
       "warning": {
         "$value": "{color.utility.yellow.500}"
       },
       "warning-subtle": {
-        "$value": "{color.utility.yellow.700}"
+        "$value": "{color.utility.yellow.950}"
       }
     },
     "content": {
@@ -66,7 +66,7 @@
         "$value": "{color.brand.blue.300}"
       },
       "danger": {
-        "$value": "{color.utility.red.500}"
+        "$value": "{color.utility.red.300}"
       },
       "success": {
         "$value": "{color.utility.green.500}"
@@ -79,7 +79,7 @@
         "$description": "Content placed ON an accent background. Contrast-paired, not the accent colour itself."
       },
       "on-danger": {
-        "$value": "{color.neutral.white}"
+        "$value": "{color.neutral.950}"
       },
       "on-success": {
         "$value": "{color.neutral.950}"
@@ -93,6 +93,9 @@
         "$value": "{color.neutral.700}"
       },
       "strong": {
+        "$value": "{color.neutral.500}"
+      },
+      "control": {
         "$value": "{color.neutral.600}"
       },
       "focus": {

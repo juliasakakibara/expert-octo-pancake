@@ -20,7 +20,7 @@
   padding: var(--pds-space-2) var(--pds-space-3);
   background: var(--pds-color-background-surface);
   color: var(--pds-color-content-default);
-  border: 1px solid var(--pds-color-border-default);
+  border: 1px solid var(--pds-color-border-control);
   border-radius: var(--pds-radius-md);
   font-family: var(--pds-typography-body-md-font-family);
   font-size: var(--pds-typography-body-md-font-size);

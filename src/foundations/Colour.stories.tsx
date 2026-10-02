@@ -10,7 +10,7 @@ const ROLES: Record<string, string[]> = {
   'Background · status': ['background-danger', 'background-danger-hover', 'background-danger-subtle', 'background-success', 'background-success-subtle', 'background-warning', 'background-warning-subtle'],
   'Content': ['content-default', 'content-muted', 'content-inverse', 'content-accent', 'content-danger', 'content-success', 'content-warning'],
   'Content · on a filled background': ['content-on-accent', 'content-on-danger', 'content-on-success', 'content-on-warning'],
-  'Border': ['border-default', 'border-strong', 'border-focus', 'border-accent', 'border-accent-hover', 'border-danger', 'border-success', 'border-warning'],
+  'Border': ['border-default', 'border-control', 'border-strong', 'border-focus', 'border-accent', 'border-accent-hover', 'border-danger', 'border-success', 'border-warning'],
 };
 
 const ALL = Object.values(ROLES).flat().map((n) => `--pds-color-${n}`);
