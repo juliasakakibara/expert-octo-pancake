@@ -42,7 +42,8 @@
     "check:contrast": "node ds-inspection/checks/contrast-pairs.mjs",
     "sync-status": "node scripts/sync-status.mjs",
     "build:lib": "npm run build:tokens && vite build -c vite.lib.config.ts && tsc -p tsconfig.lib.json",
-    "tokens:json": "node scripts/figma/tokens-to-figma.mjs > storybook-static/tokens.json"
+    "tokens:json": "node scripts/figma/tokens-to-figma.mjs > storybook-static/tokens.json",
+    "tokens:from-figma": "node scripts/figma/tokens-from-figma.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

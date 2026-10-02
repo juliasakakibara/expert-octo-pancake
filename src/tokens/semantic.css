@@ -9,7 +9,7 @@
   --pds-color-background-surface: var(--pds-color-neutral-white);
   --pds-color-background-sunken: var(--pds-color-neutral-100);
   --pds-color-background-overlay: rgb(0 0 0 / 0.4);
-  --pds-color-background-on-accent: var(--pds-color-neutral-white);
+  --pds-color-background-on-accent: var(--pds-color-neutral-300);
   --pds-color-background-accent: var(--pds-color-brand-blue-600);
   --pds-color-background-accent-hover: var(--pds-color-brand-blue-700);
   --pds-color-background-accent-active: var(--pds-color-brand-blue-800);
