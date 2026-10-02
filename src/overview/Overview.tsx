@@ -172,7 +172,7 @@ export function Overview() {
         <div className={styles.columns3}>
           <LinkTile label="Live docs" title="Storybook" href={PROJECT.storybook} />
           <LinkTile label="Code" title="GitHub" href={PROJECT.github} />
-          <LinkTile label="Figma file" title="Figma" href={PROJECT.figma} />
+          <LinkTile label="Figma file" title="Figma file" href={PROJECT.figma} />
         </div>
         <div className={styles.columns6}>
           <NumberTile value={componentsInCode} label="components in code" />
