@@ -118,6 +118,16 @@ Whenever `figma/manifest.json` has just been saved from a live snapshot, run
 `npm run sync-status` (not `--summary`) straight away, so `docs/sync-status.*`
 and the badge in Storybook show the same state as the check. Say that you did.
 
+**Two ways to reach Figma.** The official Figma MCP (`figma` in `.mcp.json`,
+`https://mcp.figma.com/mcp`, sign in once) works on the library file
+`iMysuIxqcsHZ4OpffFKYMp` without the desktop app: run the plugin scripts with
+`use_figma`. It returns at most ~20 KB per call, so take a snapshot in parts
+and check each part with a checksum before saving; it also returns
+descriptions HTML-escaped (`&#39;`), so decode them. The Figma Console MCP with
+the Desktop Bridge plugin (`figma_list_open_files`, `figma_execute`) is the
+other way and is optional. Either way, change variables in place (rename, set
+values) and never delete and recreate them: bindings follow the ID.
+
 **Before building anything in Figma**, check sync first, live if you can. If
 the library file is connected (`figma_list_open_files`), read a live snapshot
 and compare it with `figma/manifest.json`. If it is not, ask: "Open the library
