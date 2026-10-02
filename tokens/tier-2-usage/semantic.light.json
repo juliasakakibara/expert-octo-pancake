@@ -15,7 +15,7 @@
         "$value": "rgb(0 0 0 / 0.4)"
       },
       "on-accent": {
-        "$value": "{color.neutral.white}",
+        "$value": "{color.neutral.300}",
         "$description": "A surface sitting on an accent fill, e.g. a switch thumb or radio dot."
       },
       "accent": {
