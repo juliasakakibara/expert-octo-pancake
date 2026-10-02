@@ -128,6 +128,13 @@ the Desktop Bridge plugin (`figma_list_open_files`, `figma_execute`) is the
 other way and is optional. Either way, change variables in place (rename, set
 values) and never delete and recreate them: bindings follow the ID.
 
+**Token values move between code and Figma through LiveDocs** (see
+`docs/token-sync.md`). Code → Figma: `tokens.json` on GitHub Pages, SYNC in the
+widget. Figma → code: the widget's export, then `npm run tokens:from-figma`,
+which edits one `$value` at a time and never reformats a token file. However a
+token changes, run `npm run build:tokens` and commit the regenerated
+`src/tokens/*.css` with it, and run `npm run check:contrast` (CI does not yet).
+
 **Before building anything in Figma**, check sync first, live if you can. If
 the library file is connected (`figma_list_open_files`), read a live snapshot
 and compare it with `figma/manifest.json`. If it is not, ask: "Open the library
