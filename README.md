@@ -83,6 +83,7 @@ tokens/*.json ──npm run build:tokens──►  CSS variables ──►  Reac
 - **The key map.** `figma/manifest.json` also stores each Figma item's key, the handle an AI needs to place a library component in another file. With it, building a screen in Figma is a lookup instead of a search through the whole library.
 - **Where Figma cannot express the CSS**, it is written down in [`figma/GAPS.md`](figma/GAPS.md) instead of simplifying the CSS.
 - **Code Connect** is not set up: it needs an Organization or Enterprise plan.
+- **Token values sync both ways with LiveDocs**, a Figma widget. Code → Figma: CI publishes `tokens.json` with Storybook, and the widget's SYNC updates any file's variables in place. Figma → code: the widget exports your edits, `npm run tokens:from-figma` writes them into `tokens/`, and a PR takes them to `main`. How it works, what maps back and the limits: [`docs/token-sync.md`](docs/token-sync.md).
 
 ## The toolkit: lists, checks, commands, skills
 
@@ -123,6 +124,8 @@ What the checks do **not** see: values inside Figma components (a padding that d
 | `npm run validate` | The rules check above |
 | `npm run sync-status` | Rewrites [`docs/sync-status.md`](docs/sync-status.md) and the Storybook page, and prints the summary |
 | `npm run check:contrast` | The contrast check |
+| `npm run tokens:json` | Writes `storybook-static/tokens.json`, the token file LiveDocs reads (runs inside `build-storybook`) |
+| `pbpaste \| npm run tokens:from-figma` | Applies the changes LiveDocs exported from Figma to `tokens/`, one `$value` at a time. `-- file.json` reads a file instead; `-- --dry-run` only shows them |
 | `npm run figma:tokens` | What the Figma variables and text styles should be, from the tokens (the `figma-library-from-code` skill compares it with the live file) |
 | `npm run figma:spec -- <Name>` | A component's CSS turned into a Figma build spec: bindings, text styles, gaps to decide |
 | `npx tsc -b --noEmit` · `npm run lint` | Type check and lint, before any pull request |
@@ -300,7 +303,9 @@ See [docs/branching.md](docs/branching.md). `main` is the design system; changes
 
 ## Not done / not checked
 
-- Some colour pairs still fail contrast: `npm run check:contrast` lists them.
+- `check:contrast` is not in CI yet: run it before merging a token change (all 40 pairs pass today).
+- Committed `src/tokens/*.css` can go stale when JSON is edited in GitHub's web editor; CI does not check that yet. See [`docs/token-sync.md`](docs/token-sync.md).
+- Motion tokens do not sync to or from Figma.
 - Steps 6 and 7 of the workflow have not been run inside a real product team, and there is no packaged skill for moving prototypes between Figma and Storybook.
 - Code Connect is not set up (Organization or Enterprise plan).
 - Storybook is published from `main` only, not per branch.
