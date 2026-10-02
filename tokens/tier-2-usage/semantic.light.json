@@ -66,13 +66,13 @@
         "$value": "{color.brand.blue.600}"
       },
       "danger": {
-        "$value": "{color.utility.red.600}"
+        "$value": "{color.utility.red.700}"
       },
       "success": {
-        "$value": "{color.utility.green.600}"
+        "$value": "{color.utility.green.700}"
       },
       "warning": {
-        "$value": "{color.utility.yellow.600}"
+        "$value": "{color.utility.yellow.700}"
       },
       "on-accent": {
         "$value": "{color.neutral.white}",
@@ -93,7 +93,11 @@
         "$value": "{color.neutral.300}"
       },
       "strong": {
-        "$value": "{color.neutral.400}"
+        "$value": "{color.neutral.700}"
+      },
+      "control": {
+        "$value": "{color.neutral.600}",
+        "$description": "The resting edge of a form control (input, select, number field). At least 3:1 against the surface (WCAG 1.4.11); border.default stays for decorative dividers."
       },
       "focus": {
         "$value": "{color.brand.blue.500}"

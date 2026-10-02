@@ -49,7 +49,9 @@ const PAIRS = [
   ['content.on-accent', 'background.accent-hover', 4.5, 'primary Button :hover'],
   ['content.on-danger', 'background.danger', 4.5, 'danger Button'],
   ['content.on-danger', 'background.danger-hover', 4.5, 'danger Button :hover'],
-  ['border.default', 'background.surface', 3, 'TextField/Select/Textarea boundary (1.4.11)'],
+  ['content.muted', 'background.sunken', 4.5, 'muted text on sunken surfaces'],
+  ['border.control', 'background.surface', 3, 'TextField/Select/Textarea/NumberField/Combobox/Autocomplete boundary (1.4.11)'],
+  ['border.control', 'background.default', 3, 'form control boundary on the page background (1.4.11)'],
   ['border.strong', 'background.surface', 3, 'Checkbox box, Switch off-track (1.4.11)'],
   ['border.focus', 'background.surface', 3, 'focus ring'],
 ];

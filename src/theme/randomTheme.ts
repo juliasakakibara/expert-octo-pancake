@@ -38,6 +38,7 @@ export const THEMED_ROLES = [
   '--pds-color-content-accent',
   '--pds-color-content-on-accent',
   '--pds-color-border-default',
+  '--pds-color-border-control',
   '--pds-color-border-strong',
   '--pds-color-border-focus',
   '--pds-color-border-accent',
@@ -136,7 +137,9 @@ export function createRandomTheme(options: RandomThemeOptions = {}): RandomTheme
 
   const muted = weakestPassing(bg, fg, MIN_TEXT, [surface, page, sunken]);
   const borderDefault = mix(bg, fg, 0.18);
-  const borderStrong = weakestPassing(bg, fg, MIN_UI, [surface, page]);
+  // Controls' resting edge reaches 3:1; hover (border.strong) goes further so it stays visible.
+  const borderControl = weakestPassing(bg, fg, MIN_UI, [surface, page]);
+  const borderStrong = weakestPassing(bg, fg, MIN_TEXT, [surface, page]);
 
   const vars: ThemeVars = {
     '--pds-color-background-default': page,
@@ -153,6 +156,7 @@ export function createRandomTheme(options: RandomThemeOptions = {}): RandomTheme
     '--pds-color-content-accent': accent,
     '--pds-color-content-on-accent': onAccent,
     '--pds-color-border-default': borderDefault,
+    '--pds-color-border-control': borderControl,
     '--pds-color-border-strong': borderStrong,
     '--pds-color-border-focus': accent,
     '--pds-color-border-accent': accent,
@@ -171,6 +175,7 @@ export function createRandomTheme(options: RandomThemeOptions = {}): RandomTheme
     check('content.accent on background.accent-subtle', accentSubtle, accent, MIN_TEXT),
     check('content.on-accent on background.accent', accent, onAccent, MIN_TEXT),
     check('content.on-accent on background.accent-hover', accentHover, onAccent, MIN_TEXT),
+    check('border.control on background.surface', surface, borderControl, MIN_UI),
     check('border.strong on background.surface', surface, borderStrong, MIN_UI),
     check('border.focus on background.surface', surface, accent, MIN_UI),
   ];

@@ -42,7 +42,7 @@
   align-items: stretch;
   align-self: flex-start;
   background: var(--pds-color-background-surface);
-  border: 1px solid var(--pds-color-border-default);
+  border: 1px solid var(--pds-color-border-control);
   border-radius: var(--pds-radius-md);
   overflow: hidden;
   transition: border-color var(--pds-duration-fast) var(--pds-easing-standard);

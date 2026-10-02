@@ -17,6 +17,7 @@ const PAIRS: Array<[label: string, bg: string, fg: string, min: number]> = [
   ['Accent badge', 'background-accent-subtle', 'content-accent', 4.5],
   ['Primary button', 'background-accent', 'content-on-accent', 4.5],
   ['Primary button, hover', 'background-accent-hover', 'content-on-accent', 4.5],
+  ['Input edge', 'background-surface', 'border-control', 3],
   ['Checkbox, switch track', 'background-surface', 'border-strong', 3],
   ['Focus ring', 'background-surface', 'border-focus', 3],
 ];
