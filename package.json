@@ -34,14 +34,15 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6001",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build && npm run tokens:json",
     "build:tokens": "node scripts/build-tokens.mjs",
     "validate": "node scripts/validate.mjs",
     "figma:tokens": "node scripts/figma/tokens-to-figma.mjs",
     "figma:spec": "node scripts/figma/css-to-spec.mjs",
     "check:contrast": "node ds-inspection/checks/contrast-pairs.mjs",
     "sync-status": "node scripts/sync-status.mjs",
-    "build:lib": "npm run build:tokens && vite build -c vite.lib.config.ts && tsc -p tsconfig.lib.json"
+    "build:lib": "npm run build:tokens && vite build -c vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "tokens:json": "node scripts/figma/tokens-to-figma.mjs > storybook-static/tokens.json"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
