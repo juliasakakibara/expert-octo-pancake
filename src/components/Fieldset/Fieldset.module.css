@@ -1,7 +1,7 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-4);
+  gap: var(--pds-space-4);
   min-inline-size: 0;
   margin: 0;
   padding: 0;
@@ -13,12 +13,12 @@
 }
 
 .legend {
-  margin-block-end: calc(var(--sds-space-1) * -1);
-  color: var(--sds-color-content-default);
-  font-family: var(--sds-typography-label-xl-font-family);
-  font-size: var(--sds-typography-label-xl-font-size);
-  font-weight: var(--sds-typography-label-xl-font-weight);
-  line-height: var(--sds-typography-label-xl-line-height);
-  letter-spacing: var(--sds-typography-label-xl-letter-spacing);
-  text-transform: var(--sds-typography-label-xl-text-transform);
+  margin-block-end: calc(var(--pds-space-1) * -1);
+  color: var(--pds-color-content-default);
+  font-family: var(--pds-typography-label-xl-font-family);
+  font-size: var(--pds-typography-label-xl-font-size);
+  font-weight: var(--pds-typography-label-xl-font-weight);
+  line-height: var(--pds-typography-label-xl-line-height);
+  letter-spacing: var(--pds-typography-label-xl-letter-spacing);
+  text-transform: var(--pds-typography-label-xl-text-transform);
 }

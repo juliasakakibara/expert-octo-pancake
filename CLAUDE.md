@@ -46,12 +46,12 @@ If you cannot read those files, say so and stop. Do not fall back to writing fro
 
 ## The rules
 
-1. **Semantic tokens only.** Components may use `--sds-color-background-*`, `--sds-color-content-*`, `--sds-color-border-*`, `--sds-space-*`, `--sds-radius-*`, `--sds-typography-*`, `--sds-elevation-*`, `--sds-duration-*`, `--sds-easing-*`. Never a primitive (`--sds-color-brand-indigo-600`, `--sds-shadow-*`), never a raw hex, never a magic pixel where a token exists.
-   **Type comes from a text style.** Set all six `--sds-typography-<style>-*` properties (family, size, weight, line-height, letter-spacing, text-transform) from one style in `tokens/tier-2-usage/text-style.json` — a style is applied whole, never in part. Never set `--sds-font-size-*`, `--sds-line-height-*` or `--sds-letter-spacing-*` by hand; `--sds-font-weight-*` alone is allowed only to emphasise inherited text. If no style fits, that is a design decision — raise it, do not invent a combination.
+1. **Semantic tokens only.** Components may use `--pds-color-background-*`, `--pds-color-content-*`, `--pds-color-border-*`, `--pds-space-*`, `--pds-radius-*`, `--pds-typography-*`, `--pds-elevation-*`, `--pds-duration-*`, `--pds-easing-*`. Never a primitive (`--pds-color-brand-blue-600`, `--pds-shadow-*`), never a raw hex, never a magic pixel where a token exists.
+   **Type comes from a text style.** Set all six `--pds-typography-<style>-*` properties (family, size, weight, line-height, letter-spacing, text-transform) from one style in `tokens/tier-2-usage/text-style.json` — a style is applied whole, never in part. Never set `--pds-font-size-*`, `--pds-line-height-*` or `--pds-letter-spacing-*` by hand; `--pds-font-weight-*` alone is allowed only to emphasise inherited text. If no style fits, that is a design decision — raise it, do not invent a combination.
 2. **Wrap, do not rebuild.** If Base UI ships a primitive, wrap it. Never reimplement focus management, keyboard handling or ARIA.
 3. **Compose downward.** Reach for a pattern in `src/patterns/` first, then a component, then a primitive. Building a card out of divs when `Card` exists is the most common failure here.
 4. **Never edit generated files.** `src/tokens/primitives.css`, `src/tokens/semantic.css` and `src/tokens/breakpoints.ts` are build output. Edit `tokens/**/*.json` and run `npm run build:tokens`. Each generated file says so in its header.
-5. **Do not add dependencies.** No component library, no icon package, no CSS framework. Icons are inline SVG.
+5. **Do not add dependencies.** No component library, no icon package, no CSS framework. Icons are inline SVG. The one exception is `randoma11y`, for random accessible palettes (`src/theme/`); see `docs/decisions.md`.
 
 ## Two tiers of component
 

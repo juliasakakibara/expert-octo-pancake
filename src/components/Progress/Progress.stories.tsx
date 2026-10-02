@@ -48,7 +48,7 @@ export const Indeterminate: Story = {
 export const Steps: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-5)' }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-5)' }}>
       <Progress label="Just started" value={0} showValue />
       <Progress label="Halfway" value={50} showValue />
       <Progress label="Finished" value={100} showValue />

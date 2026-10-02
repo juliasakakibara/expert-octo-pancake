@@ -39,7 +39,7 @@ export const WithActions: Story = {
     <Popover.Root>
       <Popover.Trigger render={<Button>Invite</Button>} />
       <Popover.Content {...args}>
-        <div style={{ display: 'flex', gap: 'var(--sds-space-2)', justifyContent: 'flex-end' }}>
+        <div style={{ display: 'flex', gap: 'var(--pds-space-2)', justifyContent: 'flex-end' }}>
           <Popover.Close render={<Button variant="secondary" size="sm">Cancel</Button>} />
           <Popover.Close render={<Button size="sm">Send invite</Button>} />
         </div>

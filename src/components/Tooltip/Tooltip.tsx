@@ -23,7 +23,7 @@ import styles from './Tooltip.module.css';
 
 type PositionerProps = React.ComponentPropsWithoutRef<typeof BaseTooltip.Positioner>;
 
-/** Distance in px between the trigger and the popup. Matches --sds-space-2. */
+/** Distance in px between the trigger and the popup. Matches --pds-space-2. */
 const DEFAULT_SIDE_OFFSET = 8;
 
 export type TooltipContentProps = React.ComponentPropsWithoutRef<typeof BaseTooltip.Popup> & {

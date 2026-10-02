@@ -1,7 +1,29 @@
 {
-  "name": "sample-design-system",
+  "name": "@juliasakakibara/pancake-ds",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Pancake DS: a Base UI + React design system with DTCG tokens, Storybook docs, a Figma mirror and random accessible palettes.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliasakakibara/expert-octo-pancake.git"
+  },
+  "homepage": "https://juliasakakibara.github.io/expert-octo-pancake/",
+  "files": [
+    "dist/lib"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "module": "./dist/lib/index.js",
+  "types": "./dist/lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lib/types/index.d.ts",
+      "import": "./dist/lib/index.js"
+    },
+    "./styles.css": "./dist/lib/styles.css"
+  },
   "type": "module",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
@@ -18,12 +40,12 @@
     "figma:tokens": "node scripts/figma/tokens-to-figma.mjs",
     "figma:spec": "node scripts/figma/css-to-spec.mjs",
     "check:contrast": "node ds-inspection/checks/contrast-pairs.mjs",
-    "sync-status": "node scripts/sync-status.mjs"
+    "sync-status": "node scripts/sync-status.mjs",
+    "build:lib": "npm run build:tokens && vite build -c vite.lib.config.ts && tsc -p tsconfig.lib.json"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "randoma11y": "^1.0.0"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^10.6.0",
@@ -35,9 +57,15 @@
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.1.0",
     "oxlint": "^1.79.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "storybook": "^10.6.0",
     "style-dictionary": "^5.5.3",
     "typescript": "~6.0.2",
     "vite": "^8.2.2"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

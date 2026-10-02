@@ -17,10 +17,10 @@ type Story = StoryObj<typeof meta>;
 /** Splits stacked content. */
 export const Horizontal: Story = {
   render: (args) => (
-    <div style={{ width: 320, display: 'grid', gap: 'var(--sds-space-3)' }}>
-      <div style={{ fontSize: 'var(--sds-font-size-sm)' }}>Workspace settings</div>
+    <div style={{ width: 320, display: 'grid', gap: 'var(--pds-space-3)' }}>
+      <div style={{ fontSize: 'var(--pds-font-size-sm)' }}>Workspace settings</div>
       <Separator {...args} />
-      <div style={{ fontSize: 'var(--sds-font-size-sm)', color: 'var(--sds-color-content-muted)' }}>
+      <div style={{ fontSize: 'var(--pds-font-size-sm)', color: 'var(--pds-color-content-muted)' }}>
         Members, billing and integrations
       </div>
     </div>
@@ -35,8 +35,8 @@ export const Vertical: Story = {
       style={{
         display: 'flex',
         alignItems: 'center',
-        gap: 'var(--sds-space-3)',
-        fontSize: 'var(--sds-font-size-sm)',
+        gap: 'var(--pds-space-3)',
+        fontSize: 'var(--pds-font-size-sm)',
       }}
     >
       <span>Overview</span>
@@ -55,18 +55,18 @@ export const InAToolbar: Story = {
     <div
       style={{
         width: 360,
-        border: '1px solid var(--sds-color-border-default)',
-        borderRadius: 'var(--sds-radius-md)',
-        background: 'var(--sds-color-background-surface)',
+        border: '1px solid var(--pds-color-border-default)',
+        borderRadius: 'var(--pds-radius-md)',
+        background: 'var(--pds-color-background-surface)',
       }}
     >
       <div
         style={{
           display: 'flex',
           alignItems: 'center',
-          gap: 'var(--sds-space-3)',
-          padding: 'var(--sds-space-3)',
-          fontSize: 'var(--sds-font-size-sm)',
+          gap: 'var(--pds-space-3)',
+          padding: 'var(--pds-space-3)',
+          fontSize: 'var(--pds-font-size-sm)',
         }}
       >
         <span>Bold</span>
@@ -78,9 +78,9 @@ export const InAToolbar: Story = {
       <Separator />
       <div
         style={{
-          padding: 'var(--sds-space-3)',
-          fontSize: 'var(--sds-font-size-sm)',
-          color: 'var(--sds-color-content-muted)',
+          padding: 'var(--pds-space-3)',
+          fontSize: 'var(--pds-font-size-sm)',
+          color: 'var(--pds-color-content-muted)',
         }}
       >
         Selection formatting applies to the current block.

@@ -1,34 +1,34 @@
 .viewport {
   position: fixed;
-  right: var(--sds-space-4);
-  bottom: var(--sds-space-4);
+  right: var(--pds-space-4);
+  bottom: var(--pds-space-4);
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-2);
-  width: min(24rem, calc(100vw - var(--sds-space-8)));
-  font-family: var(--sds-font-sans);
+  gap: var(--pds-space-2);
+  width: min(24rem, calc(100vw - var(--pds-space-8)));
+  font-family: var(--pds-font-sans);
 }
 
 .viewport:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }
 
 .root {
   display: flex;
   align-items: flex-start;
-  gap: var(--sds-space-3);
-  padding: var(--sds-space-4);
-  background: var(--sds-color-background-surface);
-  color: var(--sds-color-content-default);
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-md);
-  box-shadow: var(--sds-elevation-overlay);
+  gap: var(--pds-space-3);
+  padding: var(--pds-space-4);
+  background: var(--pds-color-background-surface);
+  color: var(--pds-color-content-default);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-md);
+  box-shadow: var(--pds-elevation-overlay);
   /* Swipe-to-dismiss offsets, published by Base UI on the root. */
   transform: translate(var(--toast-swipe-movement-x, 0), var(--toast-swipe-movement-y, 0));
   transition:
-    opacity var(--sds-duration-normal) var(--sds-easing-standard),
-    transform var(--sds-duration-normal) var(--sds-easing-standard);
+    opacity var(--pds-duration-normal) var(--pds-easing-standard),
+    transform var(--pds-duration-normal) var(--pds-easing-standard);
 }
 
 .root[data-starting-style],
@@ -37,7 +37,7 @@
   /* Keep the swipe offset, or a swipe-dismissed toast snaps back before it goes. */
   transform: translate(
     var(--toast-swipe-movement-x, 0px),
-    calc(var(--toast-swipe-movement-y, 0px) + var(--sds-space-4))
+    calc(var(--toast-swipe-movement-y, 0px) + var(--pds-space-4))
   );
 }
 
@@ -61,69 +61,69 @@
 }
 
 .root[data-type='success'] {
-  border-color: var(--sds-color-border-accent);
+  border-color: var(--pds-color-border-accent);
 }
 
 .root[data-type='error'] {
-  border-color: var(--sds-color-border-danger);
+  border-color: var(--pds-color-border-danger);
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-1);
+  gap: var(--pds-space-1);
   flex: 1;
   min-width: 0;
 }
 
 .title {
   margin: 0;
-  font-family: var(--sds-typography-title-md-font-family);
-  font-size: var(--sds-typography-title-md-font-size);
-  font-weight: var(--sds-typography-title-md-font-weight);
-  line-height: var(--sds-typography-title-md-line-height);
-  letter-spacing: var(--sds-typography-title-md-letter-spacing);
-  text-transform: var(--sds-typography-title-md-text-transform);
+  font-family: var(--pds-typography-title-md-font-family);
+  font-size: var(--pds-typography-title-md-font-size);
+  font-weight: var(--pds-typography-title-md-font-weight);
+  line-height: var(--pds-typography-title-md-line-height);
+  letter-spacing: var(--pds-typography-title-md-letter-spacing);
+  text-transform: var(--pds-typography-title-md-text-transform);
 }
 
 .description {
   margin: 0;
-  color: var(--sds-color-content-muted);
-  font-family: var(--sds-typography-body-sm-font-family);
-  font-size: var(--sds-typography-body-sm-font-size);
-  font-weight: var(--sds-typography-body-sm-font-weight);
-  line-height: var(--sds-typography-body-sm-line-height);
-  letter-spacing: var(--sds-typography-body-sm-letter-spacing);
-  text-transform: var(--sds-typography-body-sm-text-transform);
+  color: var(--pds-color-content-muted);
+  font-family: var(--pds-typography-body-sm-font-family);
+  font-size: var(--pds-typography-body-sm-font-size);
+  font-weight: var(--pds-typography-body-sm-font-weight);
+  line-height: var(--pds-typography-body-sm-line-height);
+  letter-spacing: var(--pds-typography-body-sm-letter-spacing);
+  text-transform: var(--pds-typography-body-sm-text-transform);
 }
 
 .action {
   align-self: flex-start;
-  margin-top: var(--sds-space-1);
-  padding: var(--sds-space-1) var(--sds-space-2);
+  margin-top: var(--pds-space-1);
+  padding: var(--pds-space-1) var(--pds-space-2);
   background: transparent;
-  color: var(--sds-color-content-accent);
-  font-family: var(--sds-typography-label-md-font-family);
-  font-size: var(--sds-typography-label-md-font-size);
-  font-weight: var(--sds-typography-label-md-font-weight);
-  line-height: var(--sds-typography-label-md-line-height);
-  letter-spacing: var(--sds-typography-label-md-letter-spacing);
-  text-transform: var(--sds-typography-label-md-text-transform);
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-sm);
+  color: var(--pds-color-content-accent);
+  font-family: var(--pds-typography-label-md-font-family);
+  font-size: var(--pds-typography-label-md-font-size);
+  font-weight: var(--pds-typography-label-md-font-weight);
+  line-height: var(--pds-typography-label-md-line-height);
+  letter-spacing: var(--pds-typography-label-md-letter-spacing);
+  text-transform: var(--pds-typography-label-md-text-transform);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-sm);
   cursor: pointer;
   transition:
-    background-color var(--sds-duration-fast) var(--sds-easing-standard),
-    border-color var(--sds-duration-fast) var(--sds-easing-standard);
+    background-color var(--pds-duration-fast) var(--pds-easing-standard),
+    border-color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .action:hover:not([data-disabled]) {
-  background: var(--sds-color-background-accent-subtle);
-  border-color: var(--sds-color-border-strong);
+  background: var(--pds-color-background-accent-subtle);
+  border-color: var(--pds-color-border-strong);
 }
 
 .action:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }
 
@@ -132,23 +132,23 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  padding: var(--sds-space-1);
+  padding: var(--pds-space-1);
   background: transparent;
-  color: var(--sds-color-content-muted);
+  color: var(--pds-color-content-muted);
   border: 1px solid transparent;
-  border-radius: var(--sds-radius-sm);
+  border-radius: var(--pds-radius-sm);
   cursor: pointer;
   transition:
-    background-color var(--sds-duration-fast) var(--sds-easing-standard),
-    color var(--sds-duration-fast) var(--sds-easing-standard);
+    background-color var(--pds-duration-fast) var(--pds-easing-standard),
+    color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .close:hover {
-  background: var(--sds-color-background-sunken);
-  color: var(--sds-color-content-default);
+  background: var(--pds-color-background-sunken);
+  color: var(--pds-color-content-default);
 }
 
 .close:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }

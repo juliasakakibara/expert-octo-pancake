@@ -17,37 +17,37 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const linkStyle = {
-  color: 'var(--sds-color-content-accent)',
-  fontFamily: 'var(--sds-font-sans)',
+  color: 'var(--pds-color-content-accent)',
+  fontFamily: 'var(--pds-font-sans)',
   textDecorationLine: 'underline',
   textUnderlineOffset: '2px',
 };
 
 const Profile = () => (
-  <div style={{ display: 'grid', gap: 'var(--sds-space-2)' }}>
-    <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--sds-space-3)' }}>
+  <div style={{ display: 'grid', gap: 'var(--pds-space-2)' }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--pds-space-3)' }}>
       <span
         aria-hidden="true"
         style={{
           display: 'inline-flex',
           alignItems: 'center',
           justifyContent: 'center',
-          width: 'var(--sds-space-10)',
-          height: 'var(--sds-space-10)',
-          borderRadius: 'var(--sds-radius-full)',
-          background: 'var(--sds-color-background-accent-subtle)',
-          color: 'var(--sds-color-content-accent)',
-          fontWeight: 'var(--sds-font-weight-bold)',
+          width: 'var(--pds-space-10)',
+          height: 'var(--pds-space-10)',
+          borderRadius: 'var(--pds-radius-full)',
+          background: 'var(--pds-color-background-accent-subtle)',
+          color: 'var(--pds-color-content-accent)',
+          fontWeight: 'var(--pds-font-weight-bold)',
         }}
       >
         AL
       </span>
       <span>
         <strong style={{ display: 'block' }}>Ada Lovelace</strong>
-        <span style={{ color: 'var(--sds-color-content-muted)' }}>@ada</span>
+        <span style={{ color: 'var(--pds-color-content-muted)' }}>@ada</span>
       </span>
     </div>
-    <p style={{ margin: 0, color: 'var(--sds-color-content-muted)' }}>
+    <p style={{ margin: 0, color: 'var(--pds-color-content-muted)' }}>
       Writes the analytical engine notes. Maintains three packages you have never heard of.
     </p>
   </div>
@@ -56,7 +56,7 @@ const Profile = () => (
 export const Default: Story = {
   args: {},
   render: (args) => (
-    <p style={{ fontFamily: 'var(--sds-font-sans)', color: 'var(--sds-color-content-default)' }}>
+    <p style={{ fontFamily: 'var(--pds-font-sans)', color: 'var(--pds-color-content-default)' }}>
       Reviewed by{' '}
       <PreviewCard.Root>
         <PreviewCard.Trigger href="#ada" style={linkStyle}>
@@ -78,7 +78,7 @@ export const Default: Story = {
 export const WithActions: Story = {
   args: {},
   render: (args) => (
-    <p style={{ fontFamily: 'var(--sds-font-sans)', color: 'var(--sds-color-content-default)' }}>
+    <p style={{ fontFamily: 'var(--pds-font-sans)', color: 'var(--pds-color-content-default)' }}>
       Assigned to{' '}
       <PreviewCard.Root>
         <PreviewCard.Trigger href="#ada" style={linkStyle}>
@@ -86,7 +86,7 @@ export const WithActions: Story = {
         </PreviewCard.Trigger>
         <PreviewCard.Content {...args}>
           <Profile />
-          <div style={{ marginTop: 'var(--sds-space-3)' }}>
+          <div style={{ marginTop: 'var(--pds-space-3)' }}>
             <Button size="sm">Follow</Button>
           </div>
         </PreviewCard.Content>
@@ -100,7 +100,7 @@ export const WithActions: Story = {
 export const SideTopAlignStart: Story = {
   args: { side: 'top', align: 'start', sideOffset: 12 },
   render: (args) => (
-    <p style={{ fontFamily: 'var(--sds-font-sans)', color: 'var(--sds-color-content-default)' }}>
+    <p style={{ fontFamily: 'var(--pds-font-sans)', color: 'var(--pds-color-content-default)' }}>
       Mentioned by{' '}
       <PreviewCard.Root>
         <PreviewCard.Trigger href="#ada" style={linkStyle}>
@@ -122,7 +122,7 @@ export const SideTopAlignStart: Story = {
 export const InstantOpen: Story = {
   args: {},
   render: (args) => (
-    <p style={{ fontFamily: 'var(--sds-font-sans)', color: 'var(--sds-color-content-default)' }}>
+    <p style={{ fontFamily: 'var(--pds-font-sans)', color: 'var(--pds-color-content-default)' }}>
       Filed by{' '}
       <PreviewCard.Root>
         <PreviewCard.Trigger href="#ada" delay={0} closeDelay={100} style={linkStyle}>
@@ -145,7 +145,7 @@ export const InstantOpen: Story = {
 export const AlwaysOpen: Story = {
   args: {},
   render: (args) => (
-    <p style={{ fontFamily: 'var(--sds-font-sans)', color: 'var(--sds-color-content-default)' }}>
+    <p style={{ fontFamily: 'var(--pds-font-sans)', color: 'var(--pds-color-content-default)' }}>
       Written by{' '}
       <PreviewCard.Root defaultOpen>
         <PreviewCard.Trigger href="#ada" style={linkStyle}>

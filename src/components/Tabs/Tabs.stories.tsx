@@ -10,7 +10,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const panelStyle = { paddingTop: 'var(--sds-space-2)' };
+const panelStyle = { paddingTop: 'var(--pds-space-2)' };
 
 export const Default: Story = {
   args: { defaultValue: 'overview' },

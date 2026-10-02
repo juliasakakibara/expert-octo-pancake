@@ -83,7 +83,7 @@ export const LongBody: Story = {
 export const AllVariants: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-3)', maxWidth: 520 }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-3)', maxWidth: 520 }}>
       <Alert variant="info" title="Scheduled maintenance">
         Exports are paused on Sunday from 02:00 to 04:00 UTC.
       </Alert>

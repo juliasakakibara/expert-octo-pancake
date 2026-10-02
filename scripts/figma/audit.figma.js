@@ -9,13 +9,13 @@
 //
 // A raw value that does land in a checked field — Alert's `margin-top: 2px`,
 // drawn as padding — is marked on its node, so the exception is named where it
-// lives: node.setSharedPluginData(PREFIX, 'raw', 'paddingTop'), PREFIX being 'sds' here. Comma-separate
+// lives: node.setSharedPluginData(PREFIX, 'raw', 'paddingTop'), PREFIX being 'pds' here. Comma-separate
 // several fields. Marked fields are skipped.
 //
 // Set ONLY to audit specific components, e.g. ['Checkbox', 'Tabs'].
 const ONLY = null;
 // Must match `prefix` in config.mjs (plugin code cannot import it).
-const PREFIX = 'sds';
+const PREFIX = 'pds';
 
 const out = {};
 let checked = 0;

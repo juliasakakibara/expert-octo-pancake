@@ -60,7 +60,7 @@ export const Default: Story = { render: renderTable };
 export const NumericColumn: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-5)' }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-5)' }}>
       <Table.Root caption="With numeric on the header: label and figures share an edge">
         <Table.Head>
           <Table.Row>

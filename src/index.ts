@@ -1,5 +1,5 @@
 /**
- * Public surface of the Sample Design System.
+ * Public surface of Pancake DS.
  *
  * Importing this file also pulls in the token layer, so consumers get
  * primitives, semantic tokens and the reset by importing the library.
@@ -231,3 +231,7 @@ export type { SpinnerProps, SpinnerSize } from './components/Spinner';
  *  inside a media query. */
 export { breakpoints } from './tokens/breakpoints';
 export type { Breakpoint } from './tokens/breakpoints';
+
+/* Theming */
+export { createRandomTheme, applyTheme, clearTheme, THEMED_ROLES } from './theme';
+export type { RandomTheme, RandomThemeOptions, ThemeVars, ContrastCheck } from './theme';

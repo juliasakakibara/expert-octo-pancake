@@ -19,16 +19,16 @@
         "$description": "A surface sitting on an accent fill, e.g. a switch thumb or radio dot."
       },
       "accent": {
-        "$value": "{color.brand.indigo.600}"
+        "$value": "{color.brand.blue.600}"
       },
       "accent-hover": {
-        "$value": "{color.brand.indigo.700}"
+        "$value": "{color.brand.blue.700}"
       },
       "accent-active": {
-        "$value": "{color.brand.indigo.800}"
+        "$value": "{color.brand.blue.800}"
       },
       "accent-subtle": {
-        "$value": "{color.brand.indigo.50}"
+        "$value": "{color.brand.blue.50}"
       },
       "danger": {
         "$value": "{color.utility.red.600}"
@@ -63,7 +63,7 @@
         "$value": "{color.neutral.white}"
       },
       "accent": {
-        "$value": "{color.brand.indigo.600}"
+        "$value": "{color.brand.blue.600}"
       },
       "danger": {
         "$value": "{color.utility.red.600}"
@@ -96,13 +96,13 @@
         "$value": "{color.neutral.400}"
       },
       "focus": {
-        "$value": "{color.brand.indigo.500}"
+        "$value": "{color.brand.blue.500}"
       },
       "accent": {
-        "$value": "{color.brand.indigo.600}"
+        "$value": "{color.brand.blue.600}"
       },
       "accent-hover": {
-        "$value": "{color.brand.indigo.700}"
+        "$value": "{color.brand.blue.700}"
       },
       "danger": {
         "$value": "{color.utility.red.600}"

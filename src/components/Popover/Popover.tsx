@@ -21,7 +21,7 @@ import styles from './Popover.module.css';
 
 type PositionerProps = React.ComponentPropsWithoutRef<typeof BasePopover.Positioner>;
 
-/** Distance in px between the trigger and the popup. Matches --sds-space-2. */
+/** Distance in px between the trigger and the popup. Matches --pds-space-2. */
 const DEFAULT_SIDE_OFFSET = 8;
 
 export type PopoverContentProps = React.ComponentPropsWithoutRef<typeof BasePopover.Popup> & {

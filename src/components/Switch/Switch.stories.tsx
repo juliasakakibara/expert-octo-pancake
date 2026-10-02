@@ -40,7 +40,7 @@ export const DescriptionOnly: Story = {
 export const SettingsRows: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-5)', maxWidth: 420 }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-5)', maxWidth: 420 }}>
       <Switch
         name="product-updates"
         label="Product updates"

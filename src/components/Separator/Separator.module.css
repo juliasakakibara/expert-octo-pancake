@@ -1,7 +1,7 @@
 .root {
   flex: none;
   border: none;
-  background: var(--sds-color-border-default);
+  background: var(--pds-color-border-default);
 }
 
 .root[data-orientation='horizontal'] {
@@ -12,5 +12,5 @@
 .root[data-orientation='vertical'] {
   width: 1px;
   align-self: stretch;
-  min-height: var(--sds-space-4);
+  min-height: var(--pds-space-4);
 }

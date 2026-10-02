@@ -48,7 +48,7 @@ export const GlyphFallback: Story = {
 export const Sizes: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'flex', gap: 'var(--sds-space-4)', alignItems: 'center' }}>
+    <div style={{ display: 'flex', gap: 'var(--pds-space-4)', alignItems: 'center' }}>
       {(['sm', 'md', 'lg'] as const).map((size) => (
         <Avatar key={size} size={size} src={WORKING_IMAGE} alt="Dana Whitfield" fallback="DW" />
       ))}
@@ -68,9 +68,9 @@ export const Stack: Story = {
         <span
           key={initials}
           style={{
-            marginLeft: index === 0 ? 0 : 'calc(-1 * var(--sds-space-2))',
-            borderRadius: 'var(--sds-radius-full)',
-            boxShadow: '0 0 0 2px var(--sds-color-background-surface)',
+            marginLeft: index === 0 ? 0 : 'calc(-1 * var(--pds-space-2))',
+            borderRadius: 'var(--pds-radius-full)',
+            boxShadow: '0 0 0 2px var(--pds-color-background-surface)',
             display: 'inline-flex',
           }}
         >

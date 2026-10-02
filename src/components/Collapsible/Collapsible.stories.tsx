@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Collapsible } from './Collapsible';
 
 const body = (
-  <ul style={{ margin: 0, paddingInlineStart: 'var(--sds-space-5)' }}>
+  <ul style={{ margin: 0, paddingInlineStart: 'var(--pds-space-5)' }}>
     <li>Runs on every push to a protected branch</li>
     <li>Retries transient failures twice before reporting</li>
     <li>Artifacts are kept for 30 days</li>

@@ -1,21 +1,21 @@
-# Sample Design System
+# Pancake DS
 
-A playground for designers learning AI design system workflows. It is a small, real design system built on [Base UI](https://base-ui.com) primitives, documented in [Storybook](https://storybook.js.org) and mirrored into Figma, so you can try the whole loop yourself: tokens in code, components in Storybook, the same system as Figma variables and components, and AI tools connected to both through MCP.
+Julia Sakakibara's design system: neutral greys, a #0A5CFF accent, and a random-palette mode powered by [randoma11y](https://github.com/mrmrs/randoma11y-js), each palette checked against WCAG contrast. It is a small, real design system built on [Base UI](https://base-ui.com) primitives, documented in [Storybook](https://storybook.js.org) and mirrored into Figma, so you can try the whole loop yourself: tokens in code, components in Storybook, the same system as Figma variables and components, and AI tools connected to both through MCP.
 
-It is a teaching repo, not a production system. 42 components, 4 foundations pages, 4 full-screen patterns.
+42 components, 4 foundations pages, 4 full-screen patterns.
 
 | | |
 | --- | --- |
-| **Live Storybook** | [christinevall.github.io/ds-base-ui](https://christinevall.github.io/ds-base-ui/), no install needed. Updates on every merge to `main` |
-| **Figma library** | [Figma Community](https://www.figma.com/community/file/1681312616396112992): the same system as Figma variables, text styles and components, generated from this code. Duplicate it to explore |
+| **Live Storybook** | [juliasakakibara.github.io/expert-octo-pancake](https://juliasakakibara.github.io/expert-octo-pancake/), no install needed. Updates on every merge to `main` |
+| **Figma library** | [Figma file](https://www.figma.com/design/iMysuIxqcsHZ4OpffFKYMp): the same system as Figma variables, text styles and components, generated from this code. Duplicate it to explore |
 | **Code** | this repository. Use the green **Code** button → *Download ZIP*, or **Use this template** |
 
 ## Start here
 
 | You want to… | Go to |
 | --- | --- |
-| See every component, live | [Live Storybook](https://christinevall.github.io/ds-base-ui/) → *Getting started* |
-| Explore the same system in Figma | [Figma Community file](https://www.figma.com/community/file/1681312616396112992) |
+| See every component, live | [Live Storybook](https://juliasakakibara.github.io/expert-octo-pancake/) → *Getting started* |
+| Explore the same system in Figma | [Figma file](https://www.figma.com/design/iMysuIxqcsHZ4OpffFKYMp) |
 | Understand how it is built, no code knowledge needed | [In plain words](#in-plain-words), then [the stack](#the-stack-tool-by-tool) |
 | Try the workflow with AI | [How I use this playground](#how-i-use-this-playground) |
 | Run it on your computer | [Run it on your computer](#run-it-on-your-computer) |
@@ -34,16 +34,16 @@ It is a teaching repo, not a production system. 42 components, 4 foundations pag
 | A component (Button) with variants | A **React component** with **props**: `<Button variant="primary" size="md">` | `src/components/Button/Button.tsx` |
 | Variables (colours, spacing, type) | **Design tokens**, written as JSON and turned into CSS variables | `tokens/` → `src/tokens/*.css` |
 | The look of a component | A **stylesheet** that uses those tokens | `src/components/Button/Button.module.css` |
-| The library file you browse | **Storybook**, a website with every component and state | [live](https://christinevall.github.io/ds-base-ui/) or http://localhost:6001 |
+| The library file you browse | **Storybook**, a website with every component and state | [live](https://juliasakakibara.github.io/expert-octo-pancake/) or http://localhost:6001 |
 
 ### How a colour gets from a token to the screen (and into Figma)
 
-1. **Primitive token:** `tokens/tier-1-definitions/color.json` defines `color.brand.indigo.600` as #4F46E5. It says *what* the colour is.
-2. **Semantic token:** `tokens/tier-2-usage/semantic.light.json` defines `color.background.accent` → `{color.brand.indigo.600}`. It says *what it is for*.
-3. **Build:** `npm run build:tokens` (Style Dictionary) writes `src/tokens/semantic.css`:<br>`--sds-color-background-accent: var(--sds-color-brand-indigo-600);`
-4. **Component:** the primary button's stylesheet says `background: var(--sds-color-background-accent);`, never the hex.
-5. **Browser:** the page looks the token up and paints #4F46E5. Flip the theme in Storybook and it reads the dark file instead.
-6. **Figma:** the same token becomes the variable `color/background/accent`, an alias of `color/brand/indigo/600`, with the CSS name as its code syntax.
+1. **Primitive token:** `tokens/tier-1-definitions/color.json` defines `color.brand.blue.600` as #0A5CFF. It says *what* the colour is.
+2. **Semantic token:** `tokens/tier-2-usage/semantic.light.json` defines `color.background.accent` → `{color.brand.blue.600}`. It says *what it is for*.
+3. **Build:** `npm run build:tokens` (Style Dictionary) writes `src/tokens/semantic.css`:<br>`--pds-color-background-accent: var(--pds-color-brand-blue-600);`
+4. **Component:** the primary button's stylesheet says `background: var(--pds-color-background-accent);`, never the hex.
+5. **Browser:** the page looks the token up and paints #0A5CFF. Flip the theme in Storybook and it reads the dark file instead.
+6. **Figma:** the same token becomes the variable `color/background/accent`, an alias of `color/brand/blue/600`, with the CSS name as its code syntax.
 
 So **change the token once, and every component that uses it changes**, in code and, after a sync, in Figma. The JSON files are the one source: code and Figma are both generated from them.
 
@@ -78,7 +78,7 @@ tokens/*.json ──npm run build:tokens──►  CSS variables ──►  Reac
                               npm run validate ◄── figma/manifest.json ┘   (fails if a name, option, default or key drifts)
 ```
 
-- **Names match on purpose.** `color/background/accent` in Figma is `--sds-color-background-accent` in CSS, and a Figma layer `Button · variant=primary` resolves to `<Button variant="primary">` through `figma/manifest.json`.
+- **Names match on purpose.** `color/background/accent` in Figma is `--pds-color-background-accent` in CSS, and a Figma layer `Button · variant=primary` resolves to `<Button variant="primary">` through `figma/manifest.json`.
 - **One page shows whether code and Figma are in sync.** *Sync status* in Storybook (and [`docs/sync-status.md`](docs/sync-status.md)) lists every component with one column per check: Figma key, same name, same property names, same options, same defaults, code follows the rules. It checks names, not the look. `npm run sync-status` regenerates it, and Claude runs the same check at the start of every session and tells you the result.
 - **The key map.** `figma/manifest.json` also stores each Figma item's key, the handle an AI needs to place a library component in another file. With it, building a screen in Figma is a lookup instead of a search through the whole library.
 - **Where Figma cannot express the CSS**, it is written down in [`figma/GAPS.md`](figma/GAPS.md) instead of simplifying the CSS.
@@ -96,7 +96,7 @@ so it cannot go stale without a check noticing.
 
 | File | What it lists | Written by | Read by |
 | --- | --- | --- | --- |
-| **Storybook manifest** · [live](https://christinevall.github.io/ds-base-ui/manifests/components.json) · `storybook-static/manifests/components.json` | Every component **in code**: its props, their allowed values, defaults and stories | `npm run build-storybook` | Claude, through the Storybook MCP; `validate` |
+| **Storybook manifest** · [live](https://juliasakakibara.github.io/expert-octo-pancake/manifests/components.json) · `storybook-static/manifests/components.json` | Every component **in code**: its props, their allowed values, defaults and stories | `npm run build-storybook` | Claude, through the Storybook MCP; `validate` |
 | **Figma manifest** · [`figma/manifest.json`](figma/manifest.json) | Everything **in the Figma library**: components with their options and **descriptions** (the text of Figma's description box, so *use when* written in Figma reaches Claude), variables, text styles, plus the **key map** (the handle an AI needs to place each item in another file) | `scripts/figma/snapshot.figma.js`, run in Figma through the Figma Console MCP | `validate`, `sync-status`, Claude when building in Figma |
 | **Sync status** · in Storybook under *Sync status* · [`docs/sync-status.md`](docs/sync-status.md) | The two above **side by side**: one row per component, one column per check (Figma key, same name, same property names, same options, same defaults, code follows the rules). It checks the names, not the look: a changed padding or auto layout in Figma does not show here | `npm run contract` | You. Claude reads it out at the start of every session |
 | **Gaps** · [`figma/GAPS.md`](figma/GAPS.md) | Where Figma and the code differ **on purpose** and why, plus what is open or not checked, each marked by kind | People and Claude, by hand | Anyone wondering "is this a bug or a decision?" |
@@ -158,9 +158,9 @@ A skill is a written procedure Claude follows for one kind of job. Call it by na
 
 **Edit `tokens/**/*.json`, then run `npm run build:tokens`.** The CSS is output.
 
-Tier 1 is the raw material: `--sds-color-brand-indigo-600`, `--sds-space-4`. Nothing in a component may reference a tier-1 colour.
+Tier 1 is the raw material: `--pds-color-brand-blue-600`, `--pds-space-4`. Nothing in a component may reference a tier-1 colour.
 
-Tier 2 is the contract, organised into three categories — `--sds-color-background-*`, `--sds-color-content-*`, `--sds-color-border-*` — plus `--sds-typography-heading-lg-font-size` and friends. Components use only these. Theming means redefining tier 2, never touching tier 1 or components.
+Tier 2 is the contract, organised into three categories — `--pds-color-background-*`, `--pds-color-content-*`, `--pds-color-border-*` — plus `--pds-typography-heading-lg-font-size` and friends. Components use only these. Theming means redefining tier 2, never touching tier 1 or components.
 
 That separation is also what makes the Figma sync work. Tier-2 names map one-to-one to Figma variables, the light and dark files map to Figma variable modes, and the `var()` references map to Figma variable aliases.
 
@@ -305,15 +305,11 @@ See [docs/branching.md](docs/branching.md). `main` is the design system; changes
 - Code Connect is not set up (Organization or Enterprise plan).
 - Storybook is published from `main` only, not per branch.
 
-## Made by
+## Based on
 
-[Christine Vallaure](https://christinevallaure.com), founder of [moonlearning.io](https://moonlearning.io). I teach designers how Figma, code and AI fit together.
-
-- **The full course on this workflow** is in the making: advanced, for designers with solid Figma skills. The [newsletter](https://moonlearning.io/newsletter) is where I announce it.
-- **Live course on Maven:** [Build Scalable UI in Figma & AI: Design Systems Agents Can Actually Use](https://maven.com/moonlearning/figma). Four weeks, hybrid, all levels.
-- **Lightning session:** *Design Figma Files That Scale with AI*, with materials at [moonlearning.io/scaleAI](https://moonlearning.io/scaleAI).
-- **Self-paced Figma courses** in the [moonlearning store](https://moonlearning.io/store), and [free sessions](https://moonlearning.io/resources).
-- **For design teams:** in-house AI workshops and consulting, through [moonlearning.io](https://moonlearning.io).
+Pancake DS started as a copy of [ds-base-ui](https://github.com/christinevall/ds-base-ui) by
+[Christine Vallaure](https://christinevallaure.com) ([moonlearning.io](https://moonlearning.io)), MIT licensed.
+The token pipeline, the Figma mirror and both Figma skills are hers.
 
 ## Credits
 

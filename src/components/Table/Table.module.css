@@ -1,35 +1,35 @@
 .container {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-md);
-  background: var(--sds-color-background-surface);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-md);
+  background: var(--pds-color-background-surface);
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--sds-typography-body-sm-font-family);
-  font-size: var(--sds-typography-body-sm-font-size);
-  font-weight: var(--sds-typography-body-sm-font-weight);
-  line-height: var(--sds-typography-body-sm-line-height);
-  letter-spacing: var(--sds-typography-body-sm-letter-spacing);
-  text-transform: var(--sds-typography-body-sm-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-body-sm-font-family);
+  font-size: var(--pds-typography-body-sm-font-size);
+  font-weight: var(--pds-typography-body-sm-font-weight);
+  line-height: var(--pds-typography-body-sm-line-height);
+  letter-spacing: var(--pds-typography-body-sm-letter-spacing);
+  text-transform: var(--pds-typography-body-sm-text-transform);
+  color: var(--pds-color-content-default);
 }
 
 .caption {
   caption-side: top;
   text-align: left;
-  padding: var(--sds-space-3) var(--sds-space-4);
-  font-family: var(--sds-typography-body-sm-font-family);
-  font-size: var(--sds-typography-body-sm-font-size);
-  font-weight: var(--sds-typography-body-sm-font-weight);
-  line-height: var(--sds-typography-body-sm-line-height);
-  letter-spacing: var(--sds-typography-body-sm-letter-spacing);
-  text-transform: var(--sds-typography-body-sm-text-transform);
-  color: var(--sds-color-content-muted);
-  border-bottom: 1px solid var(--sds-color-border-default);
+  padding: var(--pds-space-3) var(--pds-space-4);
+  font-family: var(--pds-typography-body-sm-font-family);
+  font-size: var(--pds-typography-body-sm-font-size);
+  font-weight: var(--pds-typography-body-sm-font-weight);
+  line-height: var(--pds-typography-body-sm-line-height);
+  letter-spacing: var(--pds-typography-body-sm-letter-spacing);
+  text-transform: var(--pds-typography-body-sm-text-transform);
+  color: var(--pds-color-content-muted);
+  border-bottom: 1px solid var(--pds-color-border-default);
 }
 
 .visuallyHidden {
@@ -45,7 +45,7 @@
 }
 
 .head {
-  background: var(--sds-color-background-sunken);
+  background: var(--pds-color-background-sunken);
 }
 
 /* Default alignment for both kinds of cell, declared on the elements themselves
@@ -61,17 +61,17 @@
 }
 
 .headerCell {
-  padding: var(--sds-space-3) var(--sds-space-4);
-  font-weight: var(--sds-font-weight-bold);
-  color: var(--sds-color-content-default);
+  padding: var(--pds-space-3) var(--pds-space-4);
+  font-weight: var(--pds-font-weight-bold);
+  color: var(--pds-color-content-default);
   white-space: nowrap;
-  border-bottom: 1px solid var(--sds-color-border-strong);
+  border-bottom: 1px solid var(--pds-color-border-strong);
 }
 
 .cell {
-  padding: var(--sds-space-3) var(--sds-space-4);
+  padding: var(--pds-space-3) var(--pds-space-4);
   vertical-align: middle;
-  border-bottom: 1px solid var(--sds-color-border-default);
+  border-bottom: 1px solid var(--pds-color-border-default);
 }
 
 /* Applied by the `numeric` prop on both `Table.Cell` and `Table.HeaderCell`,
@@ -83,8 +83,8 @@
 
 /* A row header (`scope="row"`) inside the body reads as a cell, not as a column head. */
 .body .headerCell {
-  font-weight: var(--sds-font-weight-medium);
-  border-bottom: 1px solid var(--sds-color-border-default);
+  font-weight: var(--pds-font-weight-medium);
+  border-bottom: 1px solid var(--pds-color-border-default);
 }
 
 /* Last row keeps the container's own border instead of doubling up. */
@@ -95,5 +95,5 @@
 
 .striped .body .row:nth-of-type(even) .cell,
 .striped .body .row:nth-of-type(even) .headerCell {
-  background: var(--sds-color-background-sunken);
+  background: var(--pds-color-background-sunken);
 }

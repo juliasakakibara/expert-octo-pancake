@@ -31,9 +31,9 @@ export const Disabled: Story = { args: { disabled: true } };
 export const Matrix: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-4)' }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-4)' }}>
       {(['sm', 'md', 'lg'] as const).map((size) => (
-        <div key={size} style={{ display: 'flex', gap: 'var(--sds-space-3)', alignItems: 'center' }}>
+        <div key={size} style={{ display: 'flex', gap: 'var(--pds-space-3)', alignItems: 'center' }}>
           {(['primary', 'secondary', 'ghost', 'danger'] as const).map((variant) => (
             <Button key={variant} variant={variant} size={size}>
               {variant}

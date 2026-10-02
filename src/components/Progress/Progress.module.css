@@ -1,68 +1,68 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-2);
+  gap: var(--pds-space-2);
   width: 100%;
-  font-family: var(--sds-font-sans);
+  font-family: var(--pds-font-sans);
 }
 
 .header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: var(--sds-space-3);
+  gap: var(--pds-space-3);
 }
 
 .label {
-  font-family: var(--sds-typography-label-md-font-family);
-  font-size: var(--sds-typography-label-md-font-size);
-  font-weight: var(--sds-typography-label-md-font-weight);
-  line-height: var(--sds-typography-label-md-line-height);
-  letter-spacing: var(--sds-typography-label-md-letter-spacing);
-  text-transform: var(--sds-typography-label-md-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-label-md-font-family);
+  font-size: var(--pds-typography-label-md-font-size);
+  font-weight: var(--pds-typography-label-md-font-weight);
+  line-height: var(--pds-typography-label-md-line-height);
+  letter-spacing: var(--pds-typography-label-md-letter-spacing);
+  text-transform: var(--pds-typography-label-md-text-transform);
+  color: var(--pds-color-content-default);
 }
 
 .value {
-  font-family: var(--sds-typography-body-sm-font-family);
-  font-size: var(--sds-typography-body-sm-font-size);
-  font-weight: var(--sds-typography-body-sm-font-weight);
-  line-height: var(--sds-typography-body-sm-line-height);
-  letter-spacing: var(--sds-typography-body-sm-letter-spacing);
-  text-transform: var(--sds-typography-body-sm-text-transform);
+  font-family: var(--pds-typography-body-sm-font-family);
+  font-size: var(--pds-typography-body-sm-font-size);
+  font-weight: var(--pds-typography-body-sm-font-weight);
+  line-height: var(--pds-typography-body-sm-line-height);
+  letter-spacing: var(--pds-typography-body-sm-letter-spacing);
+  text-transform: var(--pds-typography-body-sm-text-transform);
   font-variant-numeric: tabular-nums;
-  color: var(--sds-color-content-muted);
+  color: var(--pds-color-content-muted);
 }
 
 .track {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: var(--sds-color-background-sunken);
-  border-radius: var(--sds-radius-full);
+  background: var(--pds-color-background-sunken);
+  border-radius: var(--pds-radius-full);
 }
 
 .indicator {
   position: absolute;
   top: 0;
   height: 100%;
-  background: var(--sds-color-background-accent);
+  background: var(--pds-color-background-accent);
   border-radius: inherit;
-  transition: width var(--sds-duration-normal) var(--sds-easing-standard);
+  transition: width var(--pds-duration-normal) var(--pds-easing-standard);
 }
 
 .indicator[data-complete] {
-  background: var(--sds-color-background-accent-active);
+  background: var(--pds-color-background-accent-active);
 }
 
 /* Unknown duration: Base UI leaves the width unset, so drive it here. */
 .indicator[data-indeterminate] {
   width: 35%;
-  animation: sds-progress-slide 1.4s var(--sds-easing-standard) infinite;
+  animation: pds-progress-slide 1.4s var(--pds-easing-standard) infinite;
   transition: none;
 }
 
-@keyframes sds-progress-slide {
+@keyframes pds-progress-slide {
   0% {
     transform: translateX(-100%);
   }
@@ -79,8 +79,8 @@
 
 /* Sizes */
 .sm .track {
-  height: var(--sds-space-1);
+  height: var(--pds-space-1);
 }
 .md .track {
-  height: var(--sds-space-2);
+  height: var(--pds-space-2);
 }

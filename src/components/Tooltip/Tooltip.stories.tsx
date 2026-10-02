@@ -40,7 +40,7 @@ export const Default: Story = {
 export const SharedDelayGroup: Story = {
   args: { children: 'Bold' },
   render: () => (
-    <div style={{ display: 'flex', gap: 'var(--sds-space-2)' }}>
+    <div style={{ display: 'flex', gap: 'var(--pds-space-2)' }}>
       {['Bold', 'Italic', 'Underline'].map((label) => (
         <Tooltip.Root key={label}>
           <Tooltip.Trigger render={<Button variant="ghost" size="sm">{label[0]}</Button>} />
@@ -84,7 +84,7 @@ export const LongContent: Story = {
 export const Disabled: Story = {
   args: { children: 'You should never see this' },
   render: (args) => (
-    <div style={{ display: 'flex', gap: 'var(--sds-space-4)' }}>
+    <div style={{ display: 'flex', gap: 'var(--pds-space-4)' }}>
       <Tooltip.Root disabled>
         <Tooltip.Trigger render={<Button variant="secondary">Tooltip disabled</Button>} />
         <Tooltip.Content {...args} />

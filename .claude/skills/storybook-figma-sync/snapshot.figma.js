@@ -14,9 +14,9 @@
 // up. A key only changes when an item is deleted and rebuilt, so a key diff in
 // figma/manifest.json means every file using that item loses its link.
 // Must match `prefix` in config.mjs (plugin code cannot import it).
-const PREFIX = 'sds';
+const PREFIX = 'pds';
 // The library's name, as written into the manifest.
-const LIBRARY = 'sample-design-system';
+const LIBRARY = 'pancake-ds';
 const snap = { file: LIBRARY, components: [], variables: {}, codeSyntaxExceptions: {}, textStyles: [], effectStyles: [], keys: { components: {}, textStyles: {}, effectStyles: {}, variables: {} } };
 const sortObj = (o) => Object.fromEntries(Object.entries(o).sort(([a], [b]) => a.localeCompare(b)));
 for (const page of figma.root.children) {

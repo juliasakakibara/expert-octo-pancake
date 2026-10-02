@@ -13,17 +13,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 function Scale() {
-  const { ref, values } = useResolved(SIZES.map((s) => `--sds-font-size-${s}`));
+  const { ref, values } = useResolved(SIZES.map((s) => `--pds-font-size-${s}`));
   return (
-    <div ref={ref} style={{ display: 'grid', gap: 'var(--sds-space-5)' }}>
+    <div ref={ref} style={{ display: 'grid', gap: 'var(--pds-space-5)' }}>
       {[...SIZES].reverse().map((size) => (
-        <div key={size} style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--sds-space-6)' }}>
-          <div style={{ ...mono, width: 200, flexShrink: 0, color: 'var(--sds-color-content-muted)' }}>
-            --sds-font-size-{size}
+        <div key={size} style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--pds-space-6)' }}>
+          <div style={{ ...mono, width: 200, flexShrink: 0, color: 'var(--pds-color-content-muted)' }}>
+            --pds-font-size-{size}
             <br />
-            {values[`--sds-font-size-${size}`]}
+            {values[`--pds-font-size-${size}`]}
           </div>
-          <div style={{ fontSize: `var(--sds-font-size-${size})`, lineHeight: 'var(--sds-line-height-tight)' }}>
+          <div style={{ fontSize: `var(--pds-font-size-${size})`, lineHeight: 'var(--pds-line-height-tight)' }}>
             Design systems are agreements, written down.
           </div>
         </div>
@@ -43,13 +43,13 @@ export const Scales: Story = {
       </Group>
 
       <Group title="Weight" note="Regular for body, medium for labels and controls, bold for headings. There is no light weight, because it fails contrast at small sizes.">
-        <div style={{ display: 'grid', gap: 'var(--sds-space-3)' }}>
+        <div style={{ display: 'grid', gap: 'var(--pds-space-3)' }}>
           {WEIGHTS.map((w) => (
-            <div key={w} style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--sds-space-6)' }}>
-              <div style={{ ...mono, width: 200, flexShrink: 0, color: 'var(--sds-color-content-muted)' }}>
-                --sds-font-weight-{w}
+            <div key={w} style={{ display: 'flex', alignItems: 'baseline', gap: 'var(--pds-space-6)' }}>
+              <div style={{ ...mono, width: 200, flexShrink: 0, color: 'var(--pds-color-content-muted)' }}>
+                --pds-font-weight-{w}
               </div>
-              <div style={{ fontSize: 'var(--sds-font-size-lg)', fontWeight: `var(--sds-font-weight-${w})` }}>
+              <div style={{ fontSize: 'var(--pds-font-size-lg)', fontWeight: `var(--pds-font-weight-${w})` }}>
                 Design systems are agreements, written down.
               </div>
             </div>
@@ -58,13 +58,13 @@ export const Scales: Story = {
       </Group>
 
       <Group title="Line height" note="Tight for headings and controls where the box is sized by the text. Normal for anything you actually read.">
-        <div style={{ display: 'grid', gap: 'var(--sds-space-6)', maxWidth: '52ch' }}>
+        <div style={{ display: 'grid', gap: 'var(--pds-space-6)', maxWidth: '52ch' }}>
           {(['tight', 'normal'] as const).map((lh) => (
             <div key={lh}>
-              <div style={{ ...mono, color: 'var(--sds-color-content-muted)', marginBottom: 'var(--sds-space-2)' }}>
-                --sds-line-height-{lh}
+              <div style={{ ...mono, color: 'var(--pds-color-content-muted)', marginBottom: 'var(--pds-space-2)' }}>
+                --pds-line-height-{lh}
               </div>
-              <p style={{ margin: 0, lineHeight: `var(--sds-line-height-${lh})` }}>
+              <p style={{ margin: 0, lineHeight: `var(--pds-line-height-${lh})` }}>
                 A component library is the visible part. The agreements underneath it, about spacing,
                 about naming, about who decides, are the part that determines whether it survives
                 contact with a real product team.
@@ -75,11 +75,11 @@ export const Scales: Story = {
       </Group>
 
       <Group title="Families">
-        <div style={{ display: 'grid', gap: 'var(--sds-space-3)' }}>
-          <div style={{ fontFamily: 'var(--sds-font-sans)', fontSize: 'var(--sds-font-size-lg)' }}>
+        <div style={{ display: 'grid', gap: 'var(--pds-space-3)' }}>
+          <div style={{ fontFamily: 'var(--pds-font-sans)', fontSize: 'var(--pds-font-size-lg)' }}>
             Sans, Inter. Used everywhere.
           </div>
-          <div style={{ fontFamily: 'var(--sds-font-mono)', fontSize: 'var(--sds-font-size-lg)' }}>
+          <div style={{ fontFamily: 'var(--pds-font-mono)', fontSize: 'var(--pds-font-size-lg)' }}>
             Mono, Roboto Mono. For token names, code and tabular figures.
           </div>
         </div>

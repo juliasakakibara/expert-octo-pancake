@@ -9,8 +9,8 @@
  * must match `prefix` here.
  */
 export const CONFIG = {
-  // CSS custom properties are --<prefix>-…: --sds-color-background-accent.
-  prefix: 'sds',
+  // CSS custom properties are --<prefix>-…: --pds-color-background-accent.
+  prefix: 'pds',
 
   // DTCG token files (https://www.designtokens.org).
   tokens: {

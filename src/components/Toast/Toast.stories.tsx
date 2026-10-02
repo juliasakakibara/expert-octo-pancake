@@ -55,7 +55,7 @@ function FireTypedToasts() {
   const manager = Toast.useToastManager();
 
   return (
-    <div style={{ display: 'flex', gap: 'var(--sds-space-2)' }}>
+    <div style={{ display: 'flex', gap: 'var(--pds-space-2)' }}>
       <Button
         onClick={() =>
           manager.add({
@@ -151,7 +151,7 @@ function FirePromiseToast() {
   const manager = Toast.useToastManager();
 
   return (
-    <div style={{ display: 'flex', gap: 'var(--sds-space-2)' }}>
+    <div style={{ display: 'flex', gap: 'var(--pds-space-2)' }}>
       <Button
         onClick={() =>
           manager.promise(

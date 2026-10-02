@@ -43,7 +43,7 @@ export const WithoutLabel: Story = {
 export const States: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
-    <div style={{ display: 'grid', gap: 'var(--sds-space-4)' }}>
+    <div style={{ display: 'grid', gap: 'var(--pds-space-4)' }}>
       <Checkbox label="Unchecked" />
       <Checkbox label="Checked" defaultChecked />
       <Checkbox label="Indeterminate" indeterminate />

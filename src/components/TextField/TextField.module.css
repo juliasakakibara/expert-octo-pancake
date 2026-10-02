@@ -1,48 +1,48 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-1);
+  gap: var(--pds-space-1);
 }
 
 .label {
-  font-family: var(--sds-typography-label-md-font-family);
-  font-size: var(--sds-typography-label-md-font-size);
-  font-weight: var(--sds-typography-label-md-font-weight);
-  line-height: var(--sds-typography-label-md-line-height);
-  letter-spacing: var(--sds-typography-label-md-letter-spacing);
-  text-transform: var(--sds-typography-label-md-text-transform);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-typography-label-md-font-family);
+  font-size: var(--pds-typography-label-md-font-size);
+  font-weight: var(--pds-typography-label-md-font-weight);
+  line-height: var(--pds-typography-label-md-line-height);
+  letter-spacing: var(--pds-typography-label-md-letter-spacing);
+  text-transform: var(--pds-typography-label-md-text-transform);
+  color: var(--pds-color-content-default);
 }
 
 .control {
   width: 100%;
   min-height: 40px;
-  padding: var(--sds-space-2) var(--sds-space-3);
-  background: var(--sds-color-background-surface);
-  color: var(--sds-color-content-default);
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-md);
-  font-family: var(--sds-typography-body-md-font-family);
-  font-size: var(--sds-typography-body-md-font-size);
-  font-weight: var(--sds-typography-body-md-font-weight);
-  line-height: var(--sds-typography-body-md-line-height);
-  letter-spacing: var(--sds-typography-body-md-letter-spacing);
-  text-transform: var(--sds-typography-body-md-text-transform);
-  transition: border-color var(--sds-duration-fast) var(--sds-easing-standard);
+  padding: var(--pds-space-2) var(--pds-space-3);
+  background: var(--pds-color-background-surface);
+  color: var(--pds-color-content-default);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-md);
+  font-family: var(--pds-typography-body-md-font-family);
+  font-size: var(--pds-typography-body-md-font-size);
+  font-weight: var(--pds-typography-body-md-font-weight);
+  line-height: var(--pds-typography-body-md-line-height);
+  letter-spacing: var(--pds-typography-body-md-letter-spacing);
+  text-transform: var(--pds-typography-body-md-text-transform);
+  transition: border-color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .control::placeholder {
-  color: var(--sds-color-content-muted);
+  color: var(--pds-color-content-muted);
 }
 
 .control:hover:not(:disabled) {
-  border-color: var(--sds-color-border-strong);
+  border-color: var(--pds-color-border-strong);
 }
 
 .control:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: -1px;
-  border-color: var(--sds-color-border-focus);
+  border-color: var(--pds-color-border-focus);
 }
 
 .control:disabled {
@@ -51,25 +51,25 @@
 }
 
 .control[data-invalid] {
-  border-color: var(--sds-color-border-danger);
+  border-color: var(--pds-color-border-danger);
 }
 
 .description {
-  font-family: var(--sds-typography-caption-font-family);
-  font-size: var(--sds-typography-caption-font-size);
-  font-weight: var(--sds-typography-caption-font-weight);
-  line-height: var(--sds-typography-caption-line-height);
-  letter-spacing: var(--sds-typography-caption-letter-spacing);
-  text-transform: var(--sds-typography-caption-text-transform);
-  color: var(--sds-color-content-muted);
+  font-family: var(--pds-typography-caption-font-family);
+  font-size: var(--pds-typography-caption-font-size);
+  font-weight: var(--pds-typography-caption-font-weight);
+  line-height: var(--pds-typography-caption-line-height);
+  letter-spacing: var(--pds-typography-caption-letter-spacing);
+  text-transform: var(--pds-typography-caption-text-transform);
+  color: var(--pds-color-content-muted);
 }
 
 .error {
-  font-family: var(--sds-typography-caption-font-family);
-  font-size: var(--sds-typography-caption-font-size);
-  font-weight: var(--sds-typography-caption-font-weight);
-  line-height: var(--sds-typography-caption-line-height);
-  letter-spacing: var(--sds-typography-caption-letter-spacing);
-  text-transform: var(--sds-typography-caption-text-transform);
-  color: var(--sds-color-content-danger);
+  font-family: var(--pds-typography-caption-font-family);
+  font-size: var(--pds-typography-caption-font-size);
+  font-weight: var(--pds-typography-caption-font-weight);
+  line-height: var(--pds-typography-caption-line-height);
+  letter-spacing: var(--pds-typography-caption-letter-spacing);
+  text-transform: var(--pds-typography-caption-text-transform);
+  color: var(--pds-color-content-danger);
 }

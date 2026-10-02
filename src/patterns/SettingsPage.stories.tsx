@@ -139,7 +139,7 @@ function ProfilePanel() {
             </div>
           </div>
 
-          <Separator style={{ marginBlock: 'var(--sds-space-5)' }} />
+          <Separator style={{ marginBlock: 'var(--pds-space-5)' }} />
 
           <SettingRow
             name="showLocalTime"

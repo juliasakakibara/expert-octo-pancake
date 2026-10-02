@@ -10,22 +10,22 @@
   width: max-content;
   /* `--available-width` accounts for collision padding; `100vw` does not. */
   max-width: min(20rem, var(--available-width));
-  padding: var(--sds-space-4);
-  background: var(--sds-color-background-surface);
-  color: var(--sds-color-content-default);
-  font-family: var(--sds-typography-body-sm-font-family);
-  font-size: var(--sds-typography-body-sm-font-size);
-  font-weight: var(--sds-typography-body-sm-font-weight);
-  line-height: var(--sds-typography-body-sm-line-height);
-  letter-spacing: var(--sds-typography-body-sm-letter-spacing);
-  text-transform: var(--sds-typography-body-sm-text-transform);
-  border: 1px solid var(--sds-color-border-default);
-  border-radius: var(--sds-radius-md);
-  box-shadow: var(--sds-elevation-overlay);
+  padding: var(--pds-space-4);
+  background: var(--pds-color-background-surface);
+  color: var(--pds-color-content-default);
+  font-family: var(--pds-typography-body-sm-font-family);
+  font-size: var(--pds-typography-body-sm-font-size);
+  font-weight: var(--pds-typography-body-sm-font-weight);
+  line-height: var(--pds-typography-body-sm-line-height);
+  letter-spacing: var(--pds-typography-body-sm-letter-spacing);
+  text-transform: var(--pds-typography-body-sm-text-transform);
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-radius-md);
+  box-shadow: var(--pds-elevation-overlay);
   transform-origin: var(--transform-origin);
   transition:
-    opacity var(--sds-duration-normal) var(--sds-easing-standard),
-    transform var(--sds-duration-normal) var(--sds-easing-standard);
+    opacity var(--pds-duration-normal) var(--pds-easing-standard),
+    transform var(--pds-duration-normal) var(--pds-easing-standard);
 }
 
 .popup[data-starting-style],
@@ -35,7 +35,7 @@
 }
 
 .popup:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }
 
@@ -69,13 +69,13 @@
 }
 
 .arrowFill {
-  fill: var(--sds-color-background-surface);
+  fill: var(--pds-color-background-surface);
 }
 
 .arrowOuterStroke {
-  fill: var(--sds-color-border-default);
+  fill: var(--pds-color-border-default);
 }
 
 .arrowInnerStroke {
-  fill: var(--sds-color-background-surface);
+  fill: var(--pds-color-background-surface);
 }

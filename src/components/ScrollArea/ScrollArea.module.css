@@ -1,7 +1,7 @@
 .root {
   max-width: 100%;
-  font-family: var(--sds-font-sans);
-  color: var(--sds-color-content-default);
+  font-family: var(--pds-font-sans);
+  color: var(--pds-color-content-default);
 }
 
 .viewport {
@@ -11,7 +11,7 @@
 }
 
 .viewport:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }
 
@@ -22,39 +22,39 @@
 .scrollbar {
   display: flex;
   justify-content: center;
-  margin: var(--sds-space-1);
-  border-radius: var(--sds-radius-full);
+  margin: var(--pds-space-1);
+  border-radius: var(--pds-radius-full);
   background: transparent;
   opacity: 0;
   transition:
-    opacity var(--sds-duration-normal) var(--sds-easing-standard),
-    background-color var(--sds-duration-fast) var(--sds-easing-standard);
+    opacity var(--pds-duration-normal) var(--pds-easing-standard),
+    background-color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .scrollbar[data-orientation='vertical'] {
-  width: var(--sds-space-2);
+  width: var(--pds-space-2);
 }
 
 .scrollbar[data-orientation='horizontal'] {
   flex-direction: column;
-  height: var(--sds-space-2);
+  height: var(--pds-space-2);
 }
 
 .scrollbar[data-hovering],
 .scrollbar[data-scrolling] {
-  background: var(--sds-color-background-sunken);
+  background: var(--pds-color-background-sunken);
   opacity: 1;
 }
 
 .thumb {
-  border-radius: var(--sds-radius-full);
-  background: var(--sds-color-border-strong);
-  transition: background-color var(--sds-duration-fast) var(--sds-easing-standard);
+  border-radius: var(--pds-radius-full);
+  background: var(--pds-color-border-strong);
+  transition: background-color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .thumb:hover,
 .thumb:active {
-  background: var(--sds-color-content-muted);
+  background: var(--pds-color-content-muted);
 }
 
 .thumb[data-orientation='vertical'] {

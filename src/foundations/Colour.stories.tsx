@@ -13,7 +13,7 @@ const ROLES: Record<string, string[]> = {
   'Border': ['border-default', 'border-strong', 'border-focus', 'border-accent', 'border-accent-hover', 'border-danger', 'border-success', 'border-warning'],
 };
 
-const ALL = Object.values(ROLES).flat().map((n) => `--sds-color-${n}`);
+const ALL = Object.values(ROLES).flat().map((n) => `--pds-color-${n}`);
 
 function Swatches() {
   const { ref, values } = useResolved(ALL);
@@ -21,20 +21,20 @@ function Swatches() {
     <div ref={ref}>
       {Object.entries(ROLES).map(([group, names]) => (
         <Group key={group} title={group}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 'var(--sds-space-3)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 'var(--pds-space-3)' }}>
             {names.map((name) => (
               <div key={name}>
                 <div
                   style={{
                     height: 64,
-                    borderRadius: 'var(--sds-radius-md)',
-                    border: '1px solid var(--sds-color-border-default)',
-                    background: `var(--sds-color-${name})`,
+                    borderRadius: 'var(--pds-radius-md)',
+                    border: '1px solid var(--pds-color-border-default)',
+                    background: `var(--pds-color-${name})`,
                   }}
                 />
-                <div style={{ ...mono, marginTop: 'var(--sds-space-1)' }}>--sds-color-{name}</div>
-                <div style={{ ...mono, color: 'var(--sds-color-content-muted)' }}>
-                  {values[`--sds-color-${name}`] || ' '}
+                <div style={{ ...mono, marginTop: 'var(--pds-space-1)' }}>--pds-color-{name}</div>
+                <div style={{ ...mono, color: 'var(--pds-color-content-muted)' }}>
+                  {values[`--pds-color-${name}`] || ' '}
                 </div>
               </div>
             ))}
@@ -70,12 +70,12 @@ export const Primitives: Story = {
       title="Primitive ramps"
       intro="The raw material. Nothing outside src/tokens/semantic.css is allowed to reference these. They are shown here so you can see what the semantic layer is choosing from, not so you can use them."
     >
-      {/* Named Brad's way: group → colour → step (brand/indigo, utility/red). */}
-      {(['neutral', 'brand-indigo', 'utility-green', 'utility-yellow', 'utility-red'] as const).map((ramp) => {
+      {/* Named Brad's way: group → colour → step (brand/blue, utility/red). */}
+      {(['neutral', 'brand-blue', 'utility-green', 'utility-yellow', 'utility-red'] as const).map((ramp) => {
         const steps =
           ramp === 'neutral'
             ? ['white', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900', '950']
-            : ramp === 'brand-indigo'
+            : ramp === 'brand-blue'
               ? ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900']
               : ['100', '300', '500', '600', '700'];
         return (
@@ -86,8 +86,8 @@ export const Primitives: Story = {
                   <div
                     style={{
                       height: 48,
-                      background: `var(--sds-color-${ramp}-${step})`,
-                      border: '1px solid var(--sds-color-border-default)',
+                      background: `var(--pds-color-${ramp}-${step})`,
+                      border: '1px solid var(--pds-color-border-default)',
                     }}
                   />
                   <div style={{ ...mono, textAlign: 'center' }}>{step}</div>

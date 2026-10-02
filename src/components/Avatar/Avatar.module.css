@@ -5,10 +5,10 @@
   justify-content: center;
   flex: none;
   overflow: hidden;
-  border-radius: var(--sds-radius-full);
-  background: var(--sds-color-background-sunken);
-  color: var(--sds-color-content-muted);
-  font-family: var(--sds-font-sans);
+  border-radius: var(--pds-radius-full);
+  background: var(--pds-color-background-sunken);
+  color: var(--pds-color-content-muted);
+  font-family: var(--pds-font-sans);
   user-select: none;
   vertical-align: middle;
 }
@@ -31,32 +31,32 @@
 
 /* Sizes come off the space scale so avatars line up with other controls. */
 .sm {
-  width: var(--sds-space-6);
-  height: var(--sds-space-6);
-  font-family: var(--sds-typography-label-sm-font-family);
-  font-size: var(--sds-typography-label-sm-font-size);
-  font-weight: var(--sds-typography-label-sm-font-weight);
-  line-height: var(--sds-typography-label-sm-line-height);
-  letter-spacing: var(--sds-typography-label-sm-letter-spacing);
-  text-transform: var(--sds-typography-label-sm-text-transform);
+  width: var(--pds-space-6);
+  height: var(--pds-space-6);
+  font-family: var(--pds-typography-label-sm-font-family);
+  font-size: var(--pds-typography-label-sm-font-size);
+  font-weight: var(--pds-typography-label-sm-font-weight);
+  line-height: var(--pds-typography-label-sm-line-height);
+  letter-spacing: var(--pds-typography-label-sm-letter-spacing);
+  text-transform: var(--pds-typography-label-sm-text-transform);
 }
 .md {
-  width: var(--sds-space-8);
-  height: var(--sds-space-8);
-  font-family: var(--sds-typography-label-md-font-family);
-  font-size: var(--sds-typography-label-md-font-size);
-  font-weight: var(--sds-typography-label-md-font-weight);
-  line-height: var(--sds-typography-label-md-line-height);
-  letter-spacing: var(--sds-typography-label-md-letter-spacing);
-  text-transform: var(--sds-typography-label-md-text-transform);
+  width: var(--pds-space-8);
+  height: var(--pds-space-8);
+  font-family: var(--pds-typography-label-md-font-family);
+  font-size: var(--pds-typography-label-md-font-size);
+  font-weight: var(--pds-typography-label-md-font-weight);
+  line-height: var(--pds-typography-label-md-line-height);
+  letter-spacing: var(--pds-typography-label-md-letter-spacing);
+  text-transform: var(--pds-typography-label-md-text-transform);
 }
 .lg {
-  width: var(--sds-space-12);
-  height: var(--sds-space-12);
-  font-family: var(--sds-typography-label-lg-font-family);
-  font-size: var(--sds-typography-label-lg-font-size);
-  font-weight: var(--sds-typography-label-lg-font-weight);
-  line-height: var(--sds-typography-label-lg-line-height);
-  letter-spacing: var(--sds-typography-label-lg-letter-spacing);
-  text-transform: var(--sds-typography-label-lg-text-transform);
+  width: var(--pds-space-12);
+  height: var(--pds-space-12);
+  font-family: var(--pds-typography-label-lg-font-family);
+  font-size: var(--pds-typography-label-lg-font-size);
+  font-weight: var(--pds-typography-label-lg-font-weight);
+  line-height: var(--pds-typography-label-lg-line-height);
+  letter-spacing: var(--pds-typography-label-lg-letter-spacing);
+  text-transform: var(--pds-typography-label-lg-text-transform);
 }

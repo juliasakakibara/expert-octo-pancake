@@ -3,15 +3,15 @@
  * neutral and only picks up an affordance while its menu is open.
  */
 .trigger {
-  border-radius: var(--sds-radius-md);
-  transition: background-color var(--sds-duration-fast) var(--sds-easing-standard);
+  border-radius: var(--pds-radius-md);
+  transition: background-color var(--pds-duration-fast) var(--pds-easing-standard);
 }
 
 .trigger[data-popup-open] {
-  background: var(--sds-color-background-sunken);
+  background: var(--pds-color-background-sunken);
 }
 
 .trigger:focus-visible {
-  outline: 2px solid var(--sds-color-border-focus);
+  outline: 2px solid var(--pds-color-border-focus);
   outline-offset: 2px;
 }

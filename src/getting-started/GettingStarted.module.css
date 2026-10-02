@@ -8,16 +8,16 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-10);
-  font-family: var(--sds-font-sans);
-  color: var(--sds-color-content-default);
+  gap: var(--pds-space-10);
+  font-family: var(--pds-font-sans);
+  color: var(--pds-color-content-default);
 }
 
 /* Stack · space/4: a hero or a section. */
 .stack {
   display: flex;
   flex-direction: column;
-  gap: var(--sds-space-4);
+  gap: var(--pds-space-4);
 }
 
 /* Cluster · space/2: badges, buttons. */
@@ -25,46 +25,46 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--sds-space-2);
+  gap: var(--pds-space-2);
 }
 
 /* Grid · 3 · space/4: cards side by side, two on narrow screens, one on phones. */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: var(--sds-space-4);
+  gap: var(--pds-space-4);
 }
 
 .title {
   margin: 0;
-  font-family: var(--sds-typography-heading-xl-font-family);
-  font-size: var(--sds-typography-heading-xl-font-size);
-  font-weight: var(--sds-typography-heading-xl-font-weight);
-  line-height: var(--sds-typography-heading-xl-line-height);
-  letter-spacing: var(--sds-typography-heading-xl-letter-spacing);
-  text-transform: var(--sds-typography-heading-xl-text-transform);
+  font-family: var(--pds-typography-heading-xl-font-family);
+  font-size: var(--pds-typography-heading-xl-font-size);
+  font-weight: var(--pds-typography-heading-xl-font-weight);
+  line-height: var(--pds-typography-heading-xl-line-height);
+  letter-spacing: var(--pds-typography-heading-xl-letter-spacing);
+  text-transform: var(--pds-typography-heading-xl-text-transform);
 }
 
 .lead {
   margin: 0;
   max-width: 46rem;
-  font-family: var(--sds-typography-body-md-font-family);
-  font-size: var(--sds-typography-body-md-font-size);
-  font-weight: var(--sds-typography-body-md-font-weight);
-  line-height: var(--sds-typography-body-md-line-height);
-  letter-spacing: var(--sds-typography-body-md-letter-spacing);
-  text-transform: var(--sds-typography-body-md-text-transform);
-  color: var(--sds-color-content-muted);
+  font-family: var(--pds-typography-body-md-font-family);
+  font-size: var(--pds-typography-body-md-font-size);
+  font-weight: var(--pds-typography-body-md-font-weight);
+  line-height: var(--pds-typography-body-md-line-height);
+  letter-spacing: var(--pds-typography-body-md-letter-spacing);
+  text-transform: var(--pds-typography-body-md-text-transform);
+  color: var(--pds-color-content-muted);
 }
 
 .section {
   margin: 0;
-  font-family: var(--sds-typography-heading-lg-font-family);
-  font-size: var(--sds-typography-heading-lg-font-size);
-  font-weight: var(--sds-typography-heading-lg-font-weight);
-  line-height: var(--sds-typography-heading-lg-line-height);
-  letter-spacing: var(--sds-typography-heading-lg-letter-spacing);
-  text-transform: var(--sds-typography-heading-lg-text-transform);
+  font-family: var(--pds-typography-heading-lg-font-family);
+  font-size: var(--pds-typography-heading-lg-font-size);
+  font-weight: var(--pds-typography-heading-lg-font-weight);
+  line-height: var(--pds-typography-heading-lg-line-height);
+  letter-spacing: var(--pds-typography-heading-lg-letter-spacing);
+  text-transform: var(--pds-typography-heading-lg-text-transform);
 }
 
 /* A card's link row sits at the bottom, however long the text above it. */

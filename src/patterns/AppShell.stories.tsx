@@ -240,7 +240,7 @@ function AppShell() {
                   <Card.Body>
                     <span className={styles.metricValue}>42</span>
                     <p className={styles.metricCaption}>components published</p>
-                    <Separator style={{ marginBlock: 'var(--sds-space-4)' }} />
+                    <Separator style={{ marginBlock: 'var(--pds-space-4)' }} />
                     <div className={styles.stackTight}>
                       <span>
                         <Badge variant="success" size="sm">
@@ -310,8 +310,8 @@ function AppShell() {
  * - **`Progress` and `Meter` side by side, doing different jobs.** The
  *   migration is a task that will finish; the seat count is a reading that can
  *   go up or down, so it uses `Meter` with `variant="danger"` as it nears the cap.
- * - **Surface layering from tokens alone.** The page is `--sds-color-background-default`, the
- *   bar and cards are `--sds-color-background-surface`, and the separation is a border
+ * - **Surface layering from tokens alone.** The page is `--pds-color-background-default`, the
+ *   bar and cards are `--pds-color-background-surface`, and the separation is a border
  *   token rather than a shadow — which is what keeps the dark theme legible.
  *
  * Switch the toolbar theme to dark: every surface, border and tone swaps

@@ -9,7 +9,7 @@ import { Table } from '../components/Table';
  * with "The toolkit" in README.md.
  */
 
-const REPO = 'https://github.com/christinevall/ds-base-ui/blob/main/';
+const REPO = 'https://github.com/juliasakakibara/expert-octo-pancake/blob/main/';
 const SKILLS = 'https://github.com/christinevall/skills/tree/main/';
 
 type Row = ReactNode[];

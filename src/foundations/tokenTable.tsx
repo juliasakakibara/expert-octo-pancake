@@ -26,9 +26,9 @@ export function useResolved(names: string[]) {
 
 export function Page({ title, intro, children }: { title: string; intro: string; children: React.ReactNode }) {
   return (
-    <div style={{ fontFamily: 'var(--sds-font-sans)', maxWidth: 900 }}>
-      <h1 style={{ fontSize: 'var(--sds-font-size-xl)', margin: '0 0 var(--sds-space-2)' }}>{title}</h1>
-      <p style={{ color: 'var(--sds-color-content-muted)', margin: '0 0 var(--sds-space-8)', maxWidth: '60ch' }}>
+    <div style={{ fontFamily: 'var(--pds-font-sans)', maxWidth: 900 }}>
+      <h1 style={{ fontSize: 'var(--pds-font-size-xl)', margin: '0 0 var(--pds-space-2)' }}>{title}</h1>
+      <p style={{ color: 'var(--pds-color-content-muted)', margin: '0 0 var(--pds-space-8)', maxWidth: '60ch' }}>
         {intro}
       </p>
       {children}
@@ -38,14 +38,14 @@ export function Page({ title, intro, children }: { title: string; intro: string;
 
 export function Group({ title, note, children }: { title: string; note?: string; children: React.ReactNode }) {
   return (
-    <section style={{ marginBottom: 'var(--sds-space-10)' }}>
-      <h2 style={{ fontSize: 'var(--sds-font-size-lg)', margin: '0 0 var(--sds-space-1)' }}>{title}</h2>
+    <section style={{ marginBottom: 'var(--pds-space-10)' }}>
+      <h2 style={{ fontSize: 'var(--pds-font-size-lg)', margin: '0 0 var(--pds-space-1)' }}>{title}</h2>
       {note ? (
-        <p style={{ color: 'var(--sds-color-content-muted)', fontSize: 'var(--sds-font-size-sm)', margin: '0 0 var(--sds-space-4)', maxWidth: '60ch' }}>
+        <p style={{ color: 'var(--pds-color-content-muted)', fontSize: 'var(--pds-font-size-sm)', margin: '0 0 var(--pds-space-4)', maxWidth: '60ch' }}>
           {note}
         </p>
       ) : (
-        <div style={{ height: 'var(--sds-space-4)' }} />
+        <div style={{ height: 'var(--pds-space-4)' }} />
       )}
       {children}
     </section>
@@ -53,6 +53,6 @@ export function Group({ title, note, children }: { title: string; note?: string;
 }
 
 export const mono: React.CSSProperties = {
-  fontFamily: 'var(--sds-font-mono)',
-  fontSize: 'var(--sds-font-size-xs)',
+  fontFamily: 'var(--pds-font-mono)',
+  fontSize: 'var(--pds-font-size-xs)',
 };
