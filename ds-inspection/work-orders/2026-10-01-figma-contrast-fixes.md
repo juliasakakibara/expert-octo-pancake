@@ -134,7 +134,9 @@ for (const e of edges) {
 return { changed: log.length, log, edges: edges.length };
 ```
 
-Expected: 3 primitives and 1 role created, 10 aliases re-pointed, and one edge per variant of the six controls (TextField 4, Textarea 4, Select.Trigger 8, Autocomplete.Control 8, Combobox.Control 8, NumberField 2 = 34).
+Expected: 3 primitives and 1 role created, 10 aliases re-pointed, and 30 edges rebound (TextField 4, Textarea 4, Select.Trigger 4, Autocomplete.Control 8, Combobox.Control 8, NumberField 2).
+
+**Done 2026-10-01.** The first count here said 34; the agent found 30. The four `open=true` variants of `Select.Trigger` show the blue focus edge, as `.trigger[data-popup-open]` does in code, and were left on `color/border/focus`. Snapshot taken afterwards; all 7 manifest sections match the live file by checksum, and `validate --strict` reports no findings.
 
 ## Verify, then close
 
