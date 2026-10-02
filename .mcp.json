@@ -3,6 +3,10 @@
     "storybook-base-ui": {
       "type": "http",
       "url": "http://localhost:6001/mcp"
+    },
+    "figma": {
+      "type": "http",
+      "url": "https://mcp.figma.com/mcp"
     }
   }
 }
