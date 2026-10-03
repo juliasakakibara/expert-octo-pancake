@@ -1,15 +1,16 @@
 # Token sync between code and Figma
 
 How a token value moves between this repo and any Figma file, in both
-directions, and what keeps it honest. The tool on the Figma side is
-**LiveDocs**, a widget (dev copy in `~/Developer/plugin-claude`, documented in
-its `doc/TOKEN-SYNC.md`).
+directions, and what keeps it honest. The tool on the Figma side is the
+**Syrup widget** (formerly LiveDocs; repo `magicoven-tech/figma-setup-plugin`,
+documented in its `doc/TOKEN-SYNC.md`). It documents a file's variables on the
+canvas and opens a sync panel where GitHub is the reference.
 
 ## The two directions
 
 ```
-GitHub → Figma   tokens/*.json ─PR─► main ─CI─► GitHub Pages: tokens.json ─SYNC─► Figma variables
-Figma → GitHub   Figma variables ─Export─► changes JSON ─npm run tokens:from-figma─► tokens/*.json ─PR─► CI ─► main
+GitHub → Figma   tokens/*.json ─PR─► main ─CI─► GitHub Pages: tokens.json ─Update Figma─► Figma variables
+Figma → GitHub   Figma variables ─Update GitHub─► changes JSON ─npm run tokens:from-figma─► tokens/*.json ─PR─► CI ─► main
 ```
 
 The repo stays the final record. Every change, wherever it starts, reaches
@@ -26,8 +27,10 @@ Storybook), and branch protection makes `build` required.
    `https://juliasakakibara.github.io/expert-octo-pancake/tokens.json`.
    GitHub Pages serves it with `access-control-allow-origin: *`, which is what
    a widget needs to read it.
-3. In Figma, LiveDocs reads it and updates the file's variables **in place, by
-   collection and name**. A variable keeps its ID, so every component and text
+3. In Figma, link the file once (widget → status line or **Sync…** → paste the
+   `tokens.json` address → **Link and check**; linking only compares). Then
+   **Update Figma** updates the file's variables **in place, by collection and
+   name**. A variable keeps its ID, so every component and text
    style binding survives. Missing collections and variables are created;
    nothing is ever deleted.
 
@@ -36,8 +39,9 @@ Nothing to install, no API key, works on every Figma plan.
 ## Figma → GitHub
 
 1. Edit variables in Figma.
-2. LiveDocs → **Export Figma edits to GitHub** → **Copy changes**. The export
-   holds only tokens edited since the last sync (see *baseline* below).
+2. Widget → **Sync…** → **Check status**: Figma edits are listed under
+   **Changed in Figma** → **Update GitHub** → **Copy changes**. The copy holds
+   only tokens edited since the last sync (see *baseline* below).
 3. In your own terminal (not a sandboxed agent shell, which cannot read the
    clipboard):
    ```bash
@@ -65,31 +69,32 @@ What maps back, and what is reported instead:
 
 ## The baseline: who changed what
 
-A difference between Figma and GitHub does not say which side moved. LiveDocs
-stores the value of every token at the last sync (the *baseline*) in the
+A difference between Figma and GitHub does not say which side moved. The
+widget stores the value of every token at the last sync (the *baseline*) in the
 widget. Then:
 
-| Figma vs baseline | GitHub vs baseline | SYNC does | Export includes it |
+| Figma vs baseline | GitHub vs baseline | Panel section | Action |
 | --- | --- | --- | --- |
-| same | same | nothing | no |
-| same | changed | applies GitHub's value | no |
-| changed | same | keeps the Figma edit ("Figma edits kept") | yes |
-| changed | changed | keeps Figma, reports a conflict | yes |
+| same | same | (nothing listed) | — |
+| same | changed | Changed on GitHub | **Update Figma** |
+| changed | same | Changed in Figma | **Update GitHub** |
+| changed | changed | Changed on both | **Keep Figma** or **Keep GitHub** |
 
-**Pull tokens** is the explicit override: it takes GitHub's value for
-everything. A file that has never synced has no baseline, so its first SYNC
-overwrites: export first if it holds edits.
+A file that has never synced has no baseline, so every difference shows under
+**Changed on both**: choose per section, nothing is overwritten until you do.
+The widget menu's **Differences only** filter shows just the tokens the last
+check found, each with a coloured dot.
 
 ## Limits
 
 - 177 of 180 variables sync. Motion (timing, easing) is skipped in both
   directions.
 - A widget runs only after someone interacts with it, on that person's
-  machine. SYNC is a click, not a schedule. An unattended, scheduled sync
+  machine. A check is a click, not a schedule. An unattended, scheduled sync
   would need the Figma REST variables API, which is Enterprise-only.
 - `validate --strict` compares names, not values. A value can differ between
   the Figma library file and the code without CI noticing; SYNC the library
-  file after token changes.
+  file after token changes (link it and **Update Figma**).
 - CI does not run `check:contrast` yet. Run it before merging a token change.
 
 ## Lessons
@@ -103,6 +108,10 @@ overwrites: export first if it holds edits.
   `ERR_INTERNET_DISCONNECTED`. The widget now says so in plain words.
 - **Clipboard copy inside a Figma plugin window must be synchronous.** Awaiting
   the async clipboard API first loses the click, and the fallback then fails
-  silently. LiveDocs copies on the click and shows "Copied ✓" or "Press ⌘C".
+  silently. The widget copies on the click and shows "Copied ✓" or "Press ⌘C".
+- **GitHub Pages lets clients cache for 10 minutes.** A check right after a
+  push compared Figma with the old file and offered *Update GitHub*, which
+  would have pushed the old value back. The widget now fetches a fresh copy
+  every time.
 - **Agent shells may not see the clipboard.** Run `pbpaste` in your own
   terminal.
