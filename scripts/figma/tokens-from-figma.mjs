@@ -1,5 +1,5 @@
 /**
- * Figma → tokens/*.json: applies the changes LiveDocs exports ("Export changes").
+ * Figma → tokens/*.json: applies the changes the Syrup widget copies ("Update GitHub").
  *
  * The reverse of tokens-to-figma.mjs. Each change names a Figma variable
  * (collection, name, mode) and its new value; this finds the token it came
@@ -7,7 +7,7 @@
  * their formatting. Every edit is checked by re-parsing the file: if anything
  * other than that value changed, the file is left untouched.
  *
- *   pbpaste | npm run tokens:from-figma          changes copied from LiveDocs
+ *   pbpaste | npm run tokens:from-figma          changes copied from the Syrup widget
  *   npm run tokens:from-figma -- changes.json    or from a file
  *   … -- --dry-run                               show what would change
  *
@@ -29,12 +29,12 @@ let input;
 try {
   input = JSON.parse(raw);
 } catch {
-  console.error("This isn't the changes from LiveDocs (it starts with: " + JSON.stringify(raw.trim().slice(0, 40)) + ').');
-  console.error('In Figma: LiveDocs menu → Export Figma edits to GitHub → Copy changes. Then run this again.');
+  console.error("This isn't the changes from the Syrup widget (it starts with: " + JSON.stringify(raw.trim().slice(0, 40)) + ').');
+  console.error('In Figma: Syrup widget → Sync… → Update GitHub → Copy changes. Then run this again.');
   process.exit(1);
 }
 const changes = Array.isArray(input) ? input : input.changes;
-if (!Array.isArray(changes)) throw new Error('Expected the JSON from LiveDocs "Export changes" ({ changes: [...] }).');
+if (!Array.isArray(changes)) throw new Error('Expected the JSON the Syrup widget copies with "Update GitHub" ({ changes: [...] }).');
 
 // ─── where each token lives ────────────────────────────────────────────────
 const tier1Files = readdirSync(join(TOKENS, CONFIG.tokens.definitions))

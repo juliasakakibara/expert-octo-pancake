@@ -9,7 +9,7 @@
  * must match `prefix` here.
  */
 export const CONFIG = {
-  // The name LiveDocs shows for a file linked to this system. A client fork changes it.
+  // The name the Syrup widget shows for a file linked to this system. A client fork changes it.
   name: 'Pancake DS',
 
   // CSS custom properties are --<prefix>-…: --pds-color-background-accent.
