@@ -283,6 +283,7 @@ See [docs/branching.md](docs/branching.md). `main` is the design system; changes
 - [ ] Code Connect mappings so Figma components point at these files
 - [x] Publish Storybook from `main` (GitHub Pages)
 - [ ] Publish Storybook per branch, including `design`
+- [ ] Write the project definition: who it is for, the problem, scope and positioning
 
 ## Words you will hear
 

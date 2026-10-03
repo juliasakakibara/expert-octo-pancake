@@ -192,6 +192,7 @@ export function buildPayload() {
   }
 
   return {
+    name: CONFIG.name,
     collections: { 'Color Primitives': ['Value'], Color: ['Light', 'Dark'], Size: ['Value'], Typography: ['Value'], Motion: ['Value'] },
     variables,
     textStyles,
